@@ -3132,20 +3132,95 @@ function initMobileNav() {
   const backdrop = document.getElementById('mobile-nav-backdrop');
   if (!btn || !nav || !backdrop) return;
 
-  // Mirror the desktop flow-tabs into the mobile drawer
-  const tabs = document.querySelectorAll('.flow-tabs .flow-tab');
-  tabs.forEach(tab => {
-    const mBtn = document.createElement('button');
-    mBtn.className = 'mobile-nav-btn' + (tab.classList.contains('active') ? ' active' : '');
-    mBtn.dataset.flow = tab.dataset.flow;
-    mBtn.innerHTML = tab.innerHTML;
-    mBtn.addEventListener('click', () => {
-      const flowId = parseInt(mBtn.dataset.flow);
-      switchFlow(flowId);
-      closeMobileNav();
+  // Tab order + display numbers matching the header
+  const FLOW_ORDER = [1, 2, 4, 3, 5];
+  const FLOW_NUMS  = { 1: 1, 2: 2, 4: 3, 3: 4, 5: 5 };
+  const FLOW_LABELS = {
+    1: 'Feature Tour',
+    2: 'Component Library',
+    3: 'Build Your First Page',
+    4: 'Site Settings',
+    5: 'Tips & FAQs'
+  };
+
+  function stepsForFlow(flowId) {
+    return flowId === 2 ? getFlow2Steps() : (FLOWS[flowId]?.steps || []);
+  }
+
+  function buildNav() {
+    nav.innerHTML = '';
+    FLOW_ORDER.forEach(flowId => {
+      const steps = stepsForFlow(flowId);
+      const isActive = state.activeFlow === flowId;
+
+      const item = document.createElement('div');
+      item.className = 'mobile-nav-item';
+      item.dataset.flow = flowId;
+
+      // Section header row (toggle)
+      const header = document.createElement('button');
+      header.className = 'mobile-nav-section' + (isActive ? ' active' : '');
+      header.setAttribute('aria-expanded', isActive);
+      header.innerHTML = `
+        <span class="flow-tab__num">${FLOW_NUMS[flowId]}</span>
+        <span class="mobile-nav-section__label">${FLOW_LABELS[flowId]}</span>
+        <svg class="mobile-nav-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      `;
+
+      // Steps sub-list
+      const stepsList = document.createElement('div');
+      stepsList.className = 'mobile-nav-steps' + (isActive ? ' open' : '');
+
+      steps.forEach((step, i) => {
+        if (!step.title) return;
+        const stepBtn = document.createElement('button');
+        stepBtn.className = 'mobile-nav-step';
+        stepBtn.textContent = step.title;
+        stepBtn.addEventListener('click', () => {
+          switchFlow(flowId);
+          goToStep(flowId, i);
+          closeMobileNav();
+        });
+        stepsList.appendChild(stepBtn);
+      });
+
+      header.addEventListener('click', () => {
+        const isOpen = stepsList.classList.contains('open');
+        // Collapse all
+        nav.querySelectorAll('.mobile-nav-steps').forEach(s => s.classList.remove('open'));
+        nav.querySelectorAll('.mobile-nav-section').forEach(s => {
+          s.classList.remove('active');
+          s.setAttribute('aria-expanded', 'false');
+        });
+        // Expand this one if it was closed
+        if (!isOpen) {
+          stepsList.classList.add('open');
+          header.classList.add('active');
+          header.setAttribute('aria-expanded', 'true');
+          switchFlow(flowId);
+        }
+      });
+
+      item.appendChild(header);
+      item.appendChild(stepsList);
+      nav.appendChild(item);
     });
-    nav.appendChild(mBtn);
-  });
+  }
+
+  function syncActiveSection(flowId) {
+    nav.querySelectorAll('.mobile-nav-section').forEach(s => {
+      const fid = parseInt(s.closest('.mobile-nav-item').dataset.flow);
+      const active = fid === flowId;
+      s.classList.toggle('active', active);
+      s.setAttribute('aria-expanded', active);
+    });
+    nav.querySelectorAll('.mobile-nav-steps').forEach(s => {
+      const fid = parseInt(s.closest('.mobile-nav-item').dataset.flow);
+      s.classList.toggle('open', fid === flowId);
+    });
+  }
 
   function openMobileNav() {
     btn.setAttribute('aria-expanded', 'true');
@@ -3161,6 +3236,8 @@ function initMobileNav() {
     backdrop.classList.remove('open');
   }
 
+  buildNav();
+
   btn.addEventListener('click', () => {
     const isOpen = btn.getAttribute('aria-expanded') === 'true';
     isOpen ? closeMobileNav() : openMobileNav();
@@ -3168,27 +3245,12 @@ function initMobileNav() {
 
   backdrop.addEventListener('click', closeMobileNav);
 
-  // Keep mobile nav active state in sync when flows switch via desktop tabs
-  document.querySelectorAll('.flow-tabs .flow-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      nav.querySelectorAll('.mobile-nav-btn').forEach(mb => {
-        mb.classList.toggle('active', mb.dataset.flow === tab.dataset.flow);
-      });
-    });
-  });
-
-  // Close drawer on Escape
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeMobileNav();
   });
 
-  // Expose closeMobileNav so switchFlow can sync it
   window._closeMobileNav = closeMobileNav;
-  window._syncMobileNavActive = (flowId) => {
-    nav.querySelectorAll('.mobile-nav-btn').forEach(mb => {
-      mb.classList.toggle('active', parseInt(mb.dataset.flow) === flowId);
-    });
-  };
+  window._syncMobileNavActive = syncActiveSection;
 }
 
 function init() {
