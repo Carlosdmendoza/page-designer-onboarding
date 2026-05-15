@@ -378,10 +378,10 @@ body { font-family: var(--font); color: var(--gray-900); background: var(--gray-
   text-transform: uppercase;
   letter-spacing: .04em;
 }
-.icon-table td { padding: 8px 10px; border-bottom: 1px solid var(--gray-100); vertical-align: top; }
+.icon-table td { padding: 8px 10px; border-bottom: 1px solid var(--gray-100); vertical-align: top; word-break: break-word; }
 .icon-table tr:last-child td { border-bottom: none; }
 .icon-table td:first-child { font-size: 18px; text-align: center; width: 36px; }
-.icon-table td:nth-child(2) { font-weight: 600; color: var(--gray-900); white-space: nowrap; }
+.icon-table td:nth-child(2) { font-weight: 600; color: var(--gray-900); }
 
 /* Component category grid */
 .comp-grid {
