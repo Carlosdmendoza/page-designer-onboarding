@@ -3034,6 +3034,7 @@ function switchFlow(flowId) {
   state.activeFlow = flowId;
   renderStepper(flowId);
   updateProgress(flowId);
+  if (window._syncMobileNavActive) window._syncMobileNavActive(flowId);
 }
 
 
@@ -3125,6 +3126,71 @@ document.addEventListener('keydown', e => {
 /* ============================================================
    INIT
    ============================================================ */
+function initMobileNav() {
+  const btn = document.getElementById('hamburger-btn');
+  const nav = document.getElementById('mobile-nav');
+  const backdrop = document.getElementById('mobile-nav-backdrop');
+  if (!btn || !nav || !backdrop) return;
+
+  // Mirror the desktop flow-tabs into the mobile drawer
+  const tabs = document.querySelectorAll('.flow-tabs .flow-tab');
+  tabs.forEach(tab => {
+    const mBtn = document.createElement('button');
+    mBtn.className = 'mobile-nav-btn' + (tab.classList.contains('active') ? ' active' : '');
+    mBtn.dataset.flow = tab.dataset.flow;
+    mBtn.innerHTML = tab.innerHTML;
+    mBtn.addEventListener('click', () => {
+      const flowId = parseInt(mBtn.dataset.flow);
+      switchFlow(flowId);
+      closeMobileNav();
+    });
+    nav.appendChild(mBtn);
+  });
+
+  function openMobileNav() {
+    btn.setAttribute('aria-expanded', 'true');
+    nav.classList.add('open');
+    nav.setAttribute('aria-hidden', 'false');
+    backdrop.classList.add('open');
+  }
+
+  function closeMobileNav() {
+    btn.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('open');
+    nav.setAttribute('aria-hidden', 'true');
+    backdrop.classList.remove('open');
+  }
+
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMobileNav() : openMobileNav();
+  });
+
+  backdrop.addEventListener('click', closeMobileNav);
+
+  // Keep mobile nav active state in sync when flows switch via desktop tabs
+  document.querySelectorAll('.flow-tabs .flow-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      nav.querySelectorAll('.mobile-nav-btn').forEach(mb => {
+        mb.classList.toggle('active', mb.dataset.flow === tab.dataset.flow);
+      });
+    });
+  });
+
+  // Close drawer on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMobileNav();
+  });
+
+  // Expose closeMobileNav so switchFlow can sync it
+  window._closeMobileNav = closeMobileNav;
+  window._syncMobileNavActive = (flowId) => {
+    nav.querySelectorAll('.mobile-nav-btn').forEach(mb => {
+      mb.classList.toggle('active', parseInt(mb.dataset.flow) === flowId);
+    });
+  };
+}
+
 function init() {
   renderFlow(1);
   renderFlow(2);
@@ -3133,6 +3199,7 @@ function init() {
   renderFlow(5);
   switchFlow(1);
   initSearch();
+  initMobileNav();
 }
 
 /* ============================================================
