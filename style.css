@@ -777,7 +777,7 @@ mark.search-highlight {
 .tips-list li strong { color: var(--gray-900, #111827); }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE — TABLET
    ============================================================ */
 @media (max-width: 960px) {
   .stepper { display: none; }
@@ -786,9 +786,124 @@ mark.search-highlight {
   .flow-tabs { overflow-x: auto; }
   .flow-tab { font-size: 12.5px; padding: 6px 12px; }
 }
-@media (max-width: 600px) {
-  .site-header__inner { padding: 0 16px; gap: 16px; }
-  .site-header__logo span { display: none; }
-  .flow-nav { flex-wrap: wrap; }
-  .progress-wrap { order: -1; flex-basis: 100%; }
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+@media (max-width: 640px) {
+  /* Header becomes 2-row layout */
+  :root { --header-h: 96px; }
+
+  .site-header__inner {
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 0;
+    align-items: stretch;
+    height: 100%;
+  }
+
+  /* Row 1: logo (left) + search (right) */
+  .site-header__logo {
+    order: 1;
+    flex: 1;
+    padding: 0 12px 0 16px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-wrap {
+    order: 2;
+    margin-left: 0;
+    padding: 0 12px 0 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-input {
+    width: 130px;
+    font-size: 12px;
+  }
+
+  .search-input:focus { width: 150px; }
+
+  .search-results {
+    top: calc(100% + 4px);
+    width: 280px;
+    right: 0;
+  }
+
+  /* Row 2: tabs full-width scrollable */
+  .flow-tabs {
+    order: 3;
+    width: 100%;
+    flex-basis: 100%;
+    border-radius: 0;
+    background: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+    padding: 4px 8px;
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    height: 48px;
+    align-items: center;
+  }
+  .flow-tabs::-webkit-scrollbar { display: none; }
+
+  .flow-tab {
+    font-size: 11.5px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .flow-tab__num {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    min-width: 16px;
+  }
+
+  /* Main layout */
+  .layout { grid-template-columns: 1fr; }
+  .stepper { display: none; }
+  .content { padding: 16px; }
+
+  /* Step card */
+  .step-card { padding: 16px; border-radius: 10px; }
+  .step-card__body { grid-template-columns: 1fr; gap: 16px; }
+  .step-card__header { gap: 10px; margin-bottom: 12px; }
+  .step-card__badge { width: 28px; height: 28px; font-size: 12px; min-width: 28px; }
+  .step-card__title { font-size: 16px; }
+  .step-card__text { font-size: 13px; }
+
+  /* Screenshot fills width */
+  .step-card__screenshot { margin-top: 0; }
+  .step-card__right-col { display: flex; flex-direction: column; gap: 12px; }
+
+  /* Nav */
+  .flow-nav { padding: 12px 0; gap: 8px; }
+  .btn { padding: 8px 14px; font-size: 13px; }
+  .progress-wrap { flex: 1; }
+
+  /* Flow intro */
+  .flow-intro { padding: 16px 0 8px; }
+  .flow-intro h1 { font-size: 20px; }
+  .flow-intro p { font-size: 13px; }
+
+  /* Tables scroll horizontally */
+  .icon-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 12px; }
+
+  /* Field groups */
+  .field-row { grid-template-columns: 1fr; gap: 2px; }
+  .field-name { font-size: 12px; padding-bottom: 2px; }
+  .field-desc { font-size: 12.5px; }
+
+  /* Pro tip */
+  .pro-tip { font-size: 12.5px; padding: 10px 12px; }
+
+  /* Tips list */
+  .tips-list li { font-size: 13px; }
 }
