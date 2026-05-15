@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Designer — Getting Started</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="site-header__logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="28" height="28" rx="6" fill="#7C3AED"/>
+          <rect x="6" y="6" width="7" height="7" rx="1.5" fill="white"/>
+          <rect x="15" y="6" width="7" height="7" rx="1.5" fill="white" opacity="0.6"/>
+          <rect x="6" y="15" width="7" height="7" rx="1.5" fill="white" opacity="0.6"/>
+          <rect x="15" y="15" width="7" height="7" rx="1.5" fill="white"/>
+        </svg>
+        <span>Page Designer Guide</span>
+      </div>
+      <nav class="flow-tabs" role="tablist" aria-label="Tutorial flows">
+        <button class="flow-tab active" role="tab" data-flow="1" aria-selected="true" aria-controls="flow-1-panel">
+          <span class="flow-tab__num">1</span> Feature Tour
+        </button>
+        <button class="flow-tab" role="tab" data-flow="2" aria-selected="false" aria-controls="flow-2-panel">
+          <span class="flow-tab__num">2</span> Component Library
+        </button>
+        <button class="flow-tab" role="tab" data-flow="4" aria-selected="false" aria-controls="flow-4-panel">
+          <span class="flow-tab__num">3</span> Site Settings
+        </button>
+        <button class="flow-tab" role="tab" data-flow="3" aria-selected="false" aria-controls="flow-3-panel">
+          <span class="flow-tab__num">4</span> Build Your First Page
+        </button>
+        <button class="flow-tab" role="tab" data-flow="5" aria-selected="false" aria-controls="flow-5-panel">
+          <span class="flow-tab__num">5</span> Tips &amp; FAQs
+        </button>
+      </nav>
+      <div class="search-wrap" role="search">
+        <input class="search-input" id="search-input" type="search" placeholder="Search guide…" aria-label="Search guide" autocomplete="off" />
+        <div class="search-results" id="search-results" hidden></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <div class="layout">
+
+    <!-- SIDEBAR STEPPER -->
+    <aside class="stepper" aria-label="Steps">
+      <ol class="stepper__list" id="stepper-list"></ol>
+    </aside>
+
+    <!-- CONTENT PANELS -->
+    <main class="content" id="main-content">
+
+      <!-- FLOW 1: Feature Tour -->
+      <div class="flow-panel active" id="flow-1-panel" role="tabpanel" aria-labelledby="tab-flow-1">
+        <div class="flow-intro">
+          <h1>Feature Tour</h1>
+          <p>A quick walkthrough of every tool in the Page Designer — from the toolbar icons to accessibility scanning and device previews.</p>
+        </div>
+
+        <!-- Steps injected by app.js -->
+        <div class="steps-container" id="flow-1-steps"></div>
+
+        <div class="flow-nav">
+          <button class="btn btn--ghost" id="flow-1-prev" disabled>← Previous</button>
+          <div class="progress-wrap">
+            <div class="progress-bar" id="flow-1-progress"></div>
+          </div>
+          <button class="btn btn--primary" id="flow-1-next">Next →</button>
+        </div>
+      </div>
+
+      <!-- FLOW 2: Component Library -->
+      <div class="flow-panel" id="flow-2-panel" role="tabpanel" aria-labelledby="tab-flow-2">
+        <div class="flow-intro">
+          <h1>Component Library</h1>
+          <p>Every component available in the Page Designer — what it does, where its data comes from, and what settings drive it.</p>
+        </div>
+
+        <div class="steps-container" id="flow-2-steps"></div>
+
+        <div class="flow-nav">
+          <button class="btn btn--ghost" id="flow-2-prev" disabled>← Previous</button>
+          <div class="progress-wrap">
+            <div class="progress-bar" id="flow-2-progress"></div>
+          </div>
+          <button class="btn btn--primary" id="flow-2-next">Next →</button>
+        </div>
+      </div>
+
+      <!-- FLOW 3: Build Your First Page -->
+      <div class="flow-panel" id="flow-3-panel" role="tabpanel" aria-labelledby="tab-flow-3">
+        <div class="flow-intro">
+          <h1>Build Your First Page</h1>
+          <p>A hands-on walkthrough: set your brand theme, assemble a tabbed conference page, and publish — in under 10 minutes.</p>
+        </div>
+        <div class="steps-container" id="flow-3-steps"></div>
+        <div class="flow-nav">
+          <button class="btn btn--ghost" id="flow-3-prev" disabled>← Previous</button>
+          <div class="progress-wrap">
+            <div class="progress-bar" id="flow-3-progress"></div>
+          </div>
+          <button class="btn btn--primary" id="flow-3-next">Next →</button>
+        </div>
+      </div>
+
+      <!-- FLOW 4: Site Settings -->
+      <div class="flow-panel" id="flow-4-panel" role="tabpanel" aria-labelledby="tab-flow-4">
+        <div class="flow-intro">
+          <h1>Site Settings</h1>
+          <p>A field-by-field reference for every setting in Site Settings — what it controls and where it appears across your event page.</p>
+        </div>
+        <div class="steps-container" id="flow-4-steps"></div>
+        <div class="flow-nav">
+          <button class="btn btn--ghost" id="flow-4-prev" disabled>← Previous</button>
+          <div class="progress-wrap">
+            <div class="progress-bar" id="flow-4-progress"></div>
+          </div>
+          <button class="btn btn--primary" id="flow-4-next">Next →</button>
+        </div>
+      </div>
+
+      <!-- FLOW 5: Tips & FAQs -->
+      <div class="flow-panel" id="flow-5-panel" role="tabpanel" aria-labelledby="tab-flow-5">
+        <div class="flow-intro">
+          <h1>Tips &amp; FAQs</h1>
+          <p>Checkout theming, known issues, best practices, and answers to common questions about the Page Designer.</p>
+        </div>
+        <div class="steps-container" id="flow-5-steps"></div>
+        <div class="flow-nav">
+          <button class="btn btn--ghost" id="flow-5-prev" disabled>← Previous</button>
+          <div class="progress-wrap">
+            <div class="progress-bar" id="flow-5-progress"></div>
+          </div>
+          <button class="btn btn--primary" id="flow-5-next">Next →</button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview" hidden>
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close preview">✕</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+    <p class="lightbox__caption" id="lightbox-caption"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
