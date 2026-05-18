@@ -14,20 +14,20 @@ const FLOWS = {
           <table class="icon-table">
             <thead><tr><th></th><th>Label</th><th>What it does</th></tr></thead>
             <tbody>
-              <tr><td>⊞</td><td>Select Template</td><td>Opens the Choose a Template modal</td></tr>
-              <tr><td>≡</td><td>Site Settings</td><td>Opens the full site settings panel</td></tr>
-              <tr><td>💾</td><td>Save</td><td>Manually saves the current layout</td></tr>
-              <tr><td>↩</td><td>Undo</td><td>Steps back through history (up to 30 entries)</td></tr>
-              <tr><td>🕐</td><td>History</td><td>Opens the change history panel with timestamps</td></tr>
-              <tr><td>↪</td><td>Redo</td><td>Re-applies an undone action</td></tr>
-              <tr><td>♿</td><td>Accessibility Scan</td><td>Runs a WCAG contrast/alt-text/heading check (BETA)</td></tr>
-              <tr><td>🌐</td><td>Translation Wizard</td><td>Manage multi-language translations for your page content</td></tr>
-              <tr><td>👁</td><td>Preview</td><td>Hides the editor chrome — shows the live page</td></tr>
-              <tr><td>🔗</td><td>Event Page</td><td>Opens the published event page in a new tab</td></tr>
-              <tr><td>🖥 / ⬜ / 📱</td><td>Device Views</td><td>Switches canvas between Desktop / Tablet / Mobile</td></tr>
+              <tr><td><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i></td><td>Select Template</td><td>Opens the Choose a Template modal</td></tr>
+              <tr><td><i class="fa-solid fa-sliders" aria-hidden="true"></i></td><td>Site Settings</td><td>Opens the full site settings panel</td></tr>
+              <tr><td><i class="fa-solid fa-floppy-disk" aria-hidden="true"></i></td><td>Save</td><td>Manually saves the current layout</td></tr>
+              <tr><td><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></td><td>Undo</td><td>Steps back through history (up to 30 entries)</td></tr>
+              <tr><td><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i></td><td>History</td><td>Opens the change history panel with timestamps</td></tr>
+              <tr><td><i class="fa-solid fa-rotate-right" aria-hidden="true"></i></td><td>Redo</td><td>Re-applies an undone action</td></tr>
+              <tr><td><i class="fa-solid fa-universal-access" aria-hidden="true"></i></td><td>Accessibility Scan</td><td>Runs a WCAG contrast/alt-text/heading check (BETA)</td></tr>
+              <tr><td><i class="fa-solid fa-language" aria-hidden="true"></i></td><td>Translation Wizard</td><td>Manage multi-language translations for your page content</td></tr>
+              <tr><td><i class="fa-solid fa-eye" aria-hidden="true"></i></td><td>Preview</td><td>Hides the editor chrome — shows the live page</td></tr>
+              <tr><td><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></td><td>Event Page</td><td>Opens the published event page in a new tab</td></tr>
+              <tr><td><i class="fa-solid fa-desktop" aria-hidden="true"></i> / <i class="fa-solid fa-tablet-screen-button" aria-hidden="true"></i> / <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></td><td>Device Views</td><td>Switches canvas between Desktop / Tablet / Mobile</td></tr>
             </tbody>
           </table>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>The banner at the top of the canvas tells you whether you're editing a shared layout (changes affect all events using it) or a layout private to this event only.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>The banner at the top of the canvas tells you whether you're editing a shared layout (changes affect all events using it) or a layout private to this event only.</span></div>
         `
       },
       {
@@ -38,12 +38,12 @@ const FLOWS = {
           <table class="icon-table">
             <thead><tr><th></th><th>Option</th><th>Effect</th></tr></thead>
             <tbody>
-              <tr><td>✏️</td><td><strong>Edit shared Design</strong></td><td>All events using this layout will see your changes</td></tr>
-              <tr><td>📄</td><td><strong>Make a copy for this event</strong></td><td>Duplicates the layout — only this event is affected</td></tr>
-              <tr><td>⊞</td><td><strong>Use a pre-made template</strong></td><td>Starts fresh and opens the template picker</td></tr>
+              <tr><td><i class="fa-solid fa-pen" aria-hidden="true"></i></td><td><strong>Edit shared Design</strong></td><td>All events using this layout will see your changes</td></tr>
+              <tr><td><i class="fa-solid fa-copy" aria-hidden="true"></i></td><td><strong>Make a copy for this event</strong></td><td>Duplicates the layout — only this event is affected</td></tr>
+              <tr><td><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i></td><td><strong>Use a pre-made template</strong></td><td>Starts fresh and opens the template picker</td></tr>
             </tbody>
           </table>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Not sure which to pick? Click <strong>"Why am I seeing this?"</strong> in the dialog for a plain-English explanation of shared vs. event-specific layouts.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Not sure which to pick? Click <strong>"Why am I seeing this?"</strong> in the dialog for a plain-English explanation of shared vs. event-specific layouts.</span></div>
         `
       },
       {
@@ -62,7 +62,7 @@ const FLOWS = {
             <li><strong>Charity Gala</strong> — Hero, Sponsors, Info Cards, Schedule, Speakers, Pricing</li>
             <li><strong>Octoberlights Fest</strong> — Pricing, Sponsors, Schedule, Info Cards, Speakers</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span><strong>My Templates</strong> shows layouts you've saved from the schema header. It's the fastest way to reuse a design you've already perfected for a previous event.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span><strong>My Templates</strong> shows layouts you've saved from the schema header. It's the fastest way to reuse a design you've already perfected for a previous event.</span></div>
         `
       },
       {
@@ -77,7 +77,7 @@ const FLOWS = {
             <li><strong>Style</strong> — Background (solid / gradient / image / video), border, shadow</li>
             <li><strong>Spacing</strong> — Padding on each side with linked-toggle option</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>The <strong>"+ Add new section"</strong> button always appears at the very bottom of the canvas. You can add as many sections as you need — there's no limit.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>The <strong>"+ Add new section"</strong> button always appears at the very bottom of the canvas. You can add as many sections as you need — there's no limit.</span></div>
         `
       },
       {
@@ -94,7 +94,7 @@ const FLOWS = {
             <li><strong>Add new sections</strong> — use the <strong>+ Add new section</strong> button at the bottom of the tree</li>
             <li><strong>Collapse / Expand all</strong> — use the "Collapse All" toggle in the panel header to clean up the view when working with large layouts</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>The Page Structure tree is especially useful for complex layouts with many nested sections. Instead of scrolling through a long canvas to find a component, just click it in the tree and its settings open immediately.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>The Page Structure tree is especially useful for complex layouts with many nested sections. Instead of scrolling through a long canvas to find a component, just click it in the tree and its settings open immediately.</span></div>
         `
       },
       {
@@ -120,7 +120,7 @@ const FLOWS = {
           <div class="comp-grid">
             <span class="comp-chip comp-chip--reg">Checkout Form</span><span class="comp-chip comp-chip--reg">Register Button</span>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use the <strong>search bar</strong> at the top of the panel to find any component instantly across all three tabs.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use the <strong>search bar</strong> at the top of the panel to find any component instantly across all three tabs.</span></div>
         `
       },
       {
@@ -136,7 +136,7 @@ const FLOWS = {
             <li><strong>Gradients</strong> — Site, Title, and Button gradients (3-stop + direction)</li>
           </ul>
           <p>The <strong>Color Preview panel</strong> on the right shows live swatches so you can check contrast before saving.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Click <strong>"Expand all"</strong> at the top of the Color Scheme panel to open every accordion at once — great when you need to audit all tokens together.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Click <strong>"Expand all"</strong> at the top of the Color Scheme panel to open every accordion at once — great when you need to audit all tokens together.</span></div>
         `
       },
       {
@@ -152,7 +152,7 @@ const FLOWS = {
             <li>Size tokens for h1–h3, bodyLarge, bodySmall, caption</li>
           </ul>
           <p><strong>Stylings</strong> controls global defaults for shadows, borders, spacing, and layout width (Full / Expanded / Boxed / Custom).</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>The live <strong>Typography Preview</strong> panel updates in real time as you change settings — no need to save and refresh to check how headings and body text look together.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>The live <strong>Typography Preview</strong> panel updates in real time as you change settings — no need to save and refresh to check how headings and body text look together.</span></div>
         `
       },
       {
@@ -161,7 +161,7 @@ const FLOWS = {
         content: `
           <p>Click the <strong>clock icon</strong> in the toolbar to open the History panel. It stores up to <strong>30 entries</strong> — each labeled with the action taken and a timestamp (e.g. "Added Column — just now", "New layout — 3 min ago").</p>
           <p>The <strong>ACTIVE</strong> badge marks where you are right now. Click any earlier entry to restore to that exact state.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>History is your safety net. Before making a big change like switching templates or deleting a section, check the history panel so you know you can get back to where you were.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>History is your safety net. Before making a big change like switching templates or deleting a section, check the history panel so you know you can get back to where you were.</span></div>
         `
       },
       {
@@ -176,7 +176,7 @@ const FLOWS = {
             <li>Incorrect heading order (e.g. H3 before H2)</li>
           </ul>
           <p>Issues can be <strong>auto-fixed individually</strong> or all at once with <strong>Fix All</strong>. A green checkmark and "No accessibility issues found!" means you're good to publish.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Run the accessibility scan as your last step before publishing. It takes seconds and protects visitors who rely on screen readers or have low vision.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Run the accessibility scan as your last step before publishing. It takes seconds and protects visitors who rely on screen readers or have low vision.</span></div>
         `
       },
       {
@@ -197,7 +197,7 @@ const FLOWS = {
             <li><strong>Fixed Size</strong> — set a specific pixel width and height; adds a scrollbar if content overflows</li>
           </ul>
           <p>Once configured, a code snippet is generated at the bottom of the panel. Copy and paste it into any webpage — WordPress, Webflow, a custom site, or anywhere that accepts HTML.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use <strong>Cart (Dynamic)</strong> embed to drop a registration form directly into a marketing landing page — visitors complete the checkout without ever being redirected to a Blackthorn-hosted URL.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use <strong>Cart (Dynamic)</strong> embed to drop a registration form directly into a marketing landing page — visitors complete the checkout without ever being redirected to a Blackthorn-hosted URL.</span></div>
         `
       },
       {
@@ -213,7 +213,7 @@ const FLOWS = {
             <li>Adding a CSS animation or transition not available in the UI</li>
             <li>Overriding a third-party embed's default styles</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">⚠️</span><span>CSS here overrides everything on the page — including theme tokens. Changes can be hard to debug. Always prefer using the component settings panel first, and treat Custom CSS as a last resort.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span><span>CSS here overrides everything on the page — including theme tokens. Changes can be hard to debug. Always prefer using the component settings panel first, and treat Custom CSS as a last resort.</span></div>
         `
       },
       {
@@ -228,7 +228,7 @@ const FLOWS = {
           </ul>
           <p><strong>What is NOT stored in the JSON:</strong> No sensitive or personal data is ever included. Ticket prices, registrant information, Salesforce record IDs, payment data, and attendee records all live in Salesforce — not in the layout file. The JSON is safe to share.</p>
           <p>Use it to <strong>back up</strong> a layout before big changes, <strong>share a design</strong> with your team, or <strong>version-control</strong> your page layouts.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use <strong>Copy to Clipboard</strong> to paste the JSON directly into a support ticket, Slack message, or a GitHub gist — no file download required.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use <strong>Copy to Clipboard</strong> to paste the JSON directly into a support ticket, Slack message, or a GitHub gist — no file download required.</span></div>
         `
       },
       {
@@ -247,7 +247,7 @@ const FLOWS = {
             <li>Share a layout between orgs or from a Blackthorn template</li>
             <li>Restore from a JSON backup after unwanted changes</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>The character count shown below the paste area gives you a quick sanity check — a typical full-page layout is 50,000–100,000 characters.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>The character count shown below the paste area gives you a quick sanity check — a typical full-page layout is 50,000–100,000 characters.</span></div>
         `
       },
       {
@@ -262,7 +262,7 @@ const FLOWS = {
             <li>Click <strong>Auto-fill translations</strong> — the system fills in all component strings automatically using AI translation</li>
           </ol>
           <p>Every text string on your page (header nav items, button labels, section headings, FAQ answers) appears as an editable field grouped by component.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Auto-translate first to get a solid baseline, then manually overwrite any strings that need a more precise or branded translation. Toggle <strong>Overwrite existing</strong> off to protect strings you've already hand-edited.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Auto-translate first to get a solid baseline, then manually overwrite any strings that need a more precise or branded translation. Toggle <strong>Overwrite existing</strong> off to protect strings you've already hand-edited.</span></div>
         `
       },
       {
@@ -294,7 +294,16 @@ const FLOWS = {
               </div>
             </div>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Upload your brand logo, event banner, and speaker headshots to the Asset Library before you start building — they'll be available instantly wherever you need a media picker without leaving the designer.</span></div>
+          <div class="media-privacy-note">
+            <div class="media-privacy-note__heading"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> How your media is stored</div>
+            <ul>
+              <li>Files are stored in an <strong>org-specific folder in Cloudinary</strong> — isolated to your organization and not shared with other orgs.</li>
+              <li>You can <strong>delete any file at any time</strong> from the Asset Library. Deleted files are removed from Cloudinary immediately.</li>
+              <li>Uploaded files are <strong>technically accessible to anyone with the direct URL</strong> — they are not password-protected. This is the same behavior as Salesforce Files used in Blackthorn Webapp.</li>
+              <li>Avoid uploading sensitive or confidential documents. Use the Asset Library for public-facing media: logos, event images, speaker photos, and fonts.</li>
+            </ul>
+          </div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Upload your brand logo, event banner, and speaker headshots to the Asset Library before you start building — they'll be available instantly wherever you need a media picker without leaving the designer.</span></div>
         `
       },
       {
@@ -303,14 +312,14 @@ const FLOWS = {
         content: `
           <p>Before publishing, use the <strong>three device buttons</strong> in the top-right toolbar to preview your layout at each breakpoint:</p>
           <ul>
-            <li><strong>🖥 Desktop</strong> — full-width canvas (default editor view)</li>
-            <li><strong>⬜ Tablet</strong> — ~820px canvas width</li>
-            <li><strong>📱 Mobile</strong> — ~390px canvas width</li>
+            <li><strong><i class="fa-solid fa-desktop" aria-hidden="true"></i> Desktop</strong> — full-width canvas (default editor view)</li>
+            <li><strong><i class="fa-solid fa-tablet-screen-button" aria-hidden="true"></i> Tablet</strong> — ~820px canvas width</li>
+            <li><strong><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Mobile</strong> — ~390px canvas width</li>
           </ul>
           <p>All sections and components reflow responsively — check each view before going live.</p>
           <p>Click <strong>Preview</strong> to hide all editor chrome and see the page exactly as a visitor would. A floating <strong>"Back to Editor"</strong> pill appears in the corner when you're done.</p>
           <p>The layout <strong>autosaves every 5 seconds</strong>. When you're ready, click <strong>Event Page</strong> in the toolbar to open the live published page in a new tab.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Run the <strong>Accessibility Scan</strong> before clicking Event Page — a quick check for contrast issues and missing alt text protects all your visitors.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Run the <strong>Accessibility Scan</strong> before clicking Event Page — a quick check for contrast issues and missing alt text protects all your visitors.</span></div>
         `
       }
     ]
@@ -348,7 +357,7 @@ const FLOWS = {
           <p>Padding and margin are controlled per side (top, right, bottom, left) with a unit selector (px, %, rem). Spacing is also <strong>device-aware</strong> — each section has independent spacing values for Desktop, Tablet, and Mobile.</p>
           <p>If Tablet or Mobile values are not explicitly set, they inherit from Desktop and are automatically scaled down: <strong>70% on tablet</strong> and <strong>50% on mobile</strong> by default. You can override those at any time by switching to the tablet or mobile device view in the toolbar and adjusting spacing there.</p>
           <p><strong>This same per-device spacing applies to every component on the page.</strong> Whenever you see a Margin or Padding field inside a component's settings panel, you can switch device views and set different values for each breakpoint independently.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>The <strong>Header</strong> and <strong>Footer</strong> sections are locked — they cannot be reordered using the drag handle. All other sections can be freely dragged up or down.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>The <strong>Header</strong> and <strong>Footer</strong> sections are locked — they cannot be reordered using the drag handle. All other sections can be freely dragged up or down.</span></div>
         `
       },
       {
@@ -368,7 +377,7 @@ const FLOWS = {
           </ul>
           <h4>Responsive Spacing</h4>
           <p>Like sections, columns have independent spacing values for <strong>Desktop</strong>, <strong>Tablet</strong>, and <strong>Mobile</strong>. Switch to the tablet or mobile device view in the toolbar and adjust the column's padding or margin — those values only apply to that device size and don't affect the others.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>On tablet and mobile, multi-column sections automatically collapse to fewer columns (and a single column on mobile). You can override any auto-scaled value with a per-viewport-specific setting.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>On tablet and mobile, multi-column sections automatically collapse to fewer columns (and a single column on mobile). You can override any auto-scaled value with a per-viewport-specific setting.</span></div>
         `
       },
 
@@ -387,7 +396,7 @@ const FLOWS = {
             <li><strong>Font Weight</strong> — controls text boldness</li>
             <li><strong>Margin / Padding</strong> — controls spacing around the block</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Keep your Salesforce Event description formatted and complete before designing — About Event renders exactly what is in the record, including line breaks and basic formatting.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Keep your Salesforce Event description formatted and complete before designing — About Event renders exactly what is in the record, including line breaks and basic formatting.</span></div>
         `
       },
       {
@@ -409,7 +418,7 @@ const FLOWS = {
             <li>Background Color, Background Image, Transparent Background</li>
             <li>Glass Mode, Gradient Border</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>If your event spans multiple days, use <strong>Show Session Names</strong> to display each day's sessions separately — much cleaner than a single date range for multi-day conferences.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>If your event spans multiple days, use <strong>Show Session Names</strong> to display each day's sessions separately — much cleaner than a single date range for multi-day conferences.</span></div>
         `
       },
       {
@@ -427,7 +436,7 @@ const FLOWS = {
             <li><strong>Corner Radius</strong> — rounds image corners</li>
             <li><strong>Opacity</strong> — controls image transparency (useful for overlay effects)</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use a 16:9 image for desktop and a 2:1 image for mobile for best results. Populate both image fields on the Event record so Page Designer can serve the right size per device automatically.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use a 16:9 image for desktop and a 2:1 image for mobile for best results. Populate both image fields on the Event record so Page Designer can serve the right size per device automatically.</span></div>
         `
       },
       {
@@ -447,7 +456,7 @@ const FLOWS = {
             <li><strong>Font Size</strong> — size of the countdown numbers</li>
             <li><strong>Corner Radius</strong> — rounds the time unit boxes</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Place a <strong>Register Button</strong> directly below the Countdown to convert urgency into action — visitors who see "3 days left" are primed to register immediately.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Place a <strong>Register Button</strong> directly below the Countdown to convert urgency into action — visitors who see "3 days left" are primed to register immediately.</span></div>
         `
       },
       {
@@ -465,7 +474,7 @@ const FLOWS = {
             <li><strong>Font Weight</strong> — controls boldness</li>
             <li><strong>Margin / Padding</strong> — controls spacing around the title</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Combine <strong>Gradient Text</strong> with a large font size for a bold hero-style event title that instantly communicates your event's brand.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Combine <strong>Gradient Text</strong> with a large font size for a bold hero-style event title that instantly communicates your event's brand.</span></div>
         `
       },
       {
@@ -487,7 +496,7 @@ const FLOWS = {
             <li>Background Color, Card Background</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Keep FAQs collapsed by default so visitors can scan questions quickly. Use <strong>Auto Expand</strong> only for short FAQ sections where seeing all answers at once is helpful.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Keep FAQs collapsed by default so visitors can scan questions quickly. Use <strong>Auto Expand</strong> only for short FAQ sections where seeing all answers at once is helpful.</span></div>
         `
       },
       {
@@ -505,7 +514,7 @@ const FLOWS = {
             <li><strong>Glass Effect</strong> — applies a frosted glass visual style</li>
             <li><strong>Margin / Padding</strong> — controls spacing</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>The Session Schedule works best when your Salesforce session records have complete data: session names, start/end times, and speaker assignments. The richer your SF data, the richer this component looks.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>The Session Schedule works best when your Salesforce session records have complete data: session names, start/end times, and speaker assignments. The richer your SF data, the richer this component looks.</span></div>
         `
       },
       {
@@ -522,7 +531,7 @@ const FLOWS = {
             <li><strong>Button Controls</strong> — configure the optional "View on Map" button (style, label, link behavior)</li>
             <li><strong>Background Color</strong>, Transparent Background, Gradient Border</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use <strong>Simple Location</strong> in a sidebar column next to your registration form — visitors can confirm the venue without leaving the checkout area.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use <strong>Simple Location</strong> in a sidebar column next to your registration form — visitors can confirm the venue without leaving the checkout area.</span></div>
         `
       },
       {
@@ -545,7 +554,7 @@ const FLOWS = {
             <li>Background Color, Transparent Background, Gradient Border</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use <strong>Simple Pricing</strong> in a narrow column alongside event details. Reserve the full <strong>Ticket Pricing</strong> card component for a dedicated pricing section where you want visual emphasis on each ticket tier.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use <strong>Simple Pricing</strong> in a narrow column alongside event details. Reserve the full <strong>Ticket Pricing</strong> card component for a dedicated pricing section where you want visual emphasis on each ticket tier.</span></div>
         `
       },
       {
@@ -566,7 +575,7 @@ const FLOWS = {
             <li><strong>Background Color / Background Image</strong> — section-level background</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Make sure Speaker records in Salesforce have profile photos uploaded — the cards look significantly better with headshots than with placeholder avatars.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Make sure Speaker records in Salesforce have profile photos uploaded — the cards look significantly better with headshots than with placeholder avatars.</span></div>
         `
       },
       {
@@ -584,7 +593,7 @@ const FLOWS = {
             <li><strong>Background Color</strong>, Transparent Background</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use <strong>Carousel</strong> mode when you have many sponsors at similar tiers — it keeps the section compact while still giving every logo equal visibility.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use <strong>Carousel</strong> mode when you have many sponsors at similar tiers — it keeps the section compact while still giving every logo equal visibility.</span></div>
         `
       },
       {
@@ -606,7 +615,7 @@ const FLOWS = {
             <li>Card Content Background, Transparent Content, Read More Color</li>
             <li>Text Color, Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Enable <strong>3D Effect</strong> and <strong>Gradient Border</strong> together for premium-looking ticket cards that stand out — especially effective for VIP or early-bird tiers you want to highlight.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Enable <strong>3D Effect</strong> and <strong>Gradient Border</strong> together for premium-looking ticket cards that stand out — especially effective for VIP or early-bird tiers you want to highlight.</span></div>
         `
       },
 
@@ -631,7 +640,7 @@ const FLOWS = {
             <li>Icon position, icon size, and spacing controls</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use <strong>anchor links</strong> (e.g. <code>#register</code>) in the Button Link field to scroll visitors to a specific section on the same page — no page reload needed.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use <strong>anchor links</strong> (e.g. <code>#register</code>) in the Button Link field to scroll visitors to a specific section on the same page — no page reload needed.</span></div>
         `
       },
       {
@@ -675,7 +684,7 @@ const FLOWS = {
             <li>Background Color, Text Color, Transparent Background, Glass Effect</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use the same logo in both Header and Footer for brand consistency. If you update the logo image URL later, remember to update it in both components.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use the same logo in both Header and Footer for brand consistency. If you update the logo image URL later, remember to update it in both components.</span></div>
         `
       },
       {
@@ -824,7 +833,7 @@ const FLOWS = {
               </div>
             </div>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Link the Register button to <code>#register</code> so clicking it scrolls visitors directly to your Checkout Form without leaving the page.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Link the Register button to <code>#register</code> so clicking it scrolls visitors directly to your Checkout Form without leaving the page.</span></div>
         `
       },
       {
@@ -858,7 +867,7 @@ const FLOWS = {
               </div>
             </div>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Always assign icons to your nav items before enabling the mobile bottom bar — the icon is the main visual cue on small screens, and text-only bottom bars feel incomplete.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Always assign icons to your nav items before enabling the mobile bottom bar — the icon is the main visual cue on small screens, and text-only bottom bars feel incomplete.</span></div>
         `
       },
       {
@@ -883,7 +892,7 @@ const FLOWS = {
             <li>Gradient Title, Gradient Description</li>
             <li>Glass Effect, Transparent Background</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>A background video set to autoplay + loop + mute creates a cinematic first impression. Keep the video short (15–30 seconds) so it loops seamlessly without becoming distracting.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>A background video set to autoplay + loop + mute creates a cinematic first impression. Keep the video short (15–30 seconds) so it loops seamlessly without becoming distracting.</span></div>
         `
       },
       {
@@ -901,7 +910,7 @@ const FLOWS = {
             <li><strong>Transparent Background</strong> — removes the background fill</li>
             <li><strong>Margin / Padding</strong> — controls spacing</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use a large centered Icon at the top of a column to give each column in a multi-column section a distinct visual identity — much more scannable than text headers alone.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use a large centered Icon at the top of a column to give each column in a multi-column section a distinct visual identity — much more scannable than text headers alone.</span></div>
         `
       },
       {
@@ -924,7 +933,7 @@ const FLOWS = {
             <li><strong>Font Weight</strong> — controls text boldness</li>
             <li><strong>Item Gap</strong> — spacing between list items</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Icon Lists are far more scannable than paragraphs. A list like "✓ 3 full days · ✓ 50+ speakers · ✓ Networking lunch included" communicates value faster than a sentence does.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Icon Lists are far more scannable than paragraphs. A list like "✓ 3 full days · ✓ 50+ speakers · ✓ Networking lunch included" communicates value faster than a sentence does.</span></div>
         `
       },
       {
@@ -946,7 +955,7 @@ const FLOWS = {
             <li>Background Color, Transparent Background</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Place three Icon-Text Group components side-by-side in a 3-column section to create a clean "value props" row — a classic layout that works for virtually any event type.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Place three Icon-Text Group components side-by-side in a 3-column section to create a clean "value props" row — a classic layout that works for virtually any event type.</span></div>
         `
       },
       {
@@ -967,7 +976,7 @@ const FLOWS = {
             <li><strong>3D Effect</strong> — adds a depth tilt effect on hover</li>
             <li>Background Color, Transparent Background</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Always fill in <strong>Alt Text</strong>. The Accessibility Scan flags images without it, and screen reader users rely on it to understand image content.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Always fill in <strong>Alt Text</strong>. The Accessibility Scan flags images without it, and screen reader users rely on it to understand image content.</span></div>
         `
       },
       {
@@ -992,7 +1001,7 @@ const FLOWS = {
             <li>Remove Shadow, Gradient Border, Icon Animation, Glass Effect, Transparent Background</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Enable <strong>Icon Animation</strong> to make the icons animate on scroll — a small detail that adds polish and encourages visitors to engage with the stats section.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Enable <strong>Icon Animation</strong> to make the icons animate on scroll — a small detail that adds polish and encourages visitors to engage with the stats section.</span></div>
         `
       },
       {
@@ -1008,7 +1017,7 @@ const FLOWS = {
             <li><strong>Gradient Text</strong> — applies gradient color to the paragraph text</li>
             <li><strong>Font Weight</strong> — controls text boldness</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use <strong>Paragraph</strong> for short, single-purpose text blocks. For multi-paragraph formatted content with links, bullet points, or HTML — use <strong>Rich Text</strong> instead.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use <strong>Paragraph</strong> for short, single-purpose text blocks. For multi-paragraph formatted content with links, bullet points, or HTML — use <strong>Rich Text</strong> instead.</span></div>
         `
       },
       {
@@ -1025,7 +1034,7 @@ const FLOWS = {
             <li><strong>Font Weight</strong> — controls boldness</li>
             <li><strong>Margin / Padding</strong> — controls spacing around the content block</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Rich Text is your best choice when you need links inside a block of copy, or when you want to paste formatted content from a document. For simple body text without links or lists, <strong>Paragraph</strong> is faster to work with.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Rich Text is your best choice when you need links inside a block of copy, or when you want to paste formatted content from a document. For simple body text without links or lists, <strong>Paragraph</strong> is faster to work with.</span></div>
         `
       },
       {
@@ -1042,7 +1051,7 @@ const FLOWS = {
             <li><strong>Share Behavior</strong> — enables the social sharing functionality</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Place the Social Share Button near the top of the page (in the Hero or just below it) to capture visitors who are excited about the event before they scroll to checkout.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Place the Social Share Button near the top of the page (in the Hero or just below it) to capture visitors who are excited about the event before they scroll to checkout.</span></div>
         `
       },
       {
@@ -1066,7 +1075,7 @@ const FLOWS = {
           </ul>
           <h4>Keyboard Navigation</h4>
           <p>Arrow keys cycle through tabs, Home/End jump to first/last tab, Escape closes overflow menus — fully accessible by default.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>The <strong>Tabbed Conference</strong> template is pre-built with a Tabs component covering Schedule, Speakers, FAQ, Pricing, and more — the fastest starting point for multi-session events.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>The <strong>Tabbed Conference</strong> template is pre-built with a Tabs component covering Schedule, Speakers, FAQ, Pricing, and more — the fastest starting point for multi-session events.</span></div>
         `
       },
       {
@@ -1085,7 +1094,7 @@ const FLOWS = {
             <li><strong>Gradient Text</strong> — applies gradient color to the title text</li>
             <li><strong>Font Weight</strong> — controls boldness</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use <strong>Gradient Text</strong> on section titles to add a branded color effect that ties visually to your Primary and Accent colors — without changing the heading structure of the page.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use <strong>Gradient Text</strong> on section titles to add a branded color effect that ties visually to your Primary and Accent colors — without changing the heading structure of the page.</span></div>
         `
       },
       {
@@ -1111,7 +1120,7 @@ const FLOWS = {
           <ul>
             <li>Background Color, Transparent Background</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Go to the <strong>Styling tab</strong> and select <strong>Full Width (100%)</strong> to make the video fill the entire column — especially impactful in a 2-column layout where the video anchors one side and registration details anchor the other.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Go to the <strong>Styling tab</strong> and select <strong>Full Width (100%)</strong> to make the video fill the entire column — especially impactful in a 2-column layout where the video anchors one side and registration details anchor the other.</span></div>
         `
       },
 
@@ -1132,7 +1141,7 @@ const FLOWS = {
             <li><strong>Hide Ticket Name</strong> — removes the ticket title from the form</li>
             <li>Question Text Color, Field Background Color</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Set the containing Section's ID (in Section → Content → Section ID) to <code>register</code>, then link your Header's Register button to <code>#register</code> — visitors scroll directly to the form with one click.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Set the containing Section's ID (in Section → Content → Section ID) to <code>register</code>, then link your Header's Register button to <code>#register</code> — visitors scroll directly to the form with one click.</span></div>
         `
       },
       {
@@ -1148,7 +1157,7 @@ const FLOWS = {
             <li>Icon position, icon size controls</li>
             <li>Margin / Padding</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Place the Register Button above the fold and again near the bottom of the page. Visitors who read through all your content before deciding to register shouldn't have to scroll back up to find the button.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Place the Register Button above the fold and again near the bottom of the page. Visitors who read through all your content before deciding to register shouldn't have to scroll back up to find the button.</span></div>
         `
       }
 
@@ -1164,7 +1173,7 @@ const FLOWS = {
         content: `
           <p>Before adding any content, let's give your page your brand's look and feel. Open <strong>Site Settings</strong> (sliders icon in the toolbar), then click <strong>Color Scheme</strong> in the left nav, then click the <strong>Theme Creator</strong> button at the top.</p>
           <p>The Theme Wizard ("Smart fill across Site Settings") opens in a modal. It takes just a few brand colors and fills in all derived tokens automatically — hover states, gradients, semantic colors.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>You only need 4 inputs: Background, Text on base, Primary color, and Accent color. The wizard handles everything else — you can fine-tune individual tokens afterwards.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>You only need 4 inputs: Background, Text on base, Primary color, and Accent color. The wizard handles everything else — you can fine-tune individual tokens afterwards.</span></div>
         `
       },
       {
@@ -1184,7 +1193,7 @@ const FLOWS = {
             </tbody>
           </table>
           <p>Click <strong>"Save &amp; Auto-Fill the rest"</strong>. The wizard propagates all tokens across Site Settings.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Your saved theme appears under <strong>Your Org Themes</strong> and can be reused for any future event — you'll never need to set up the same brand colors twice.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Your saved theme appears under <strong>Your Org Themes</strong> and can be reused for any future event — you'll never need to set up the same brand colors twice.</span></div>
         `
       },
       {
@@ -1194,7 +1203,7 @@ const FLOWS = {
           <p class="field-section-intro">With your theme set, it's time to build the page. You have two starting points — pick the one that matches how much control you want from the start.</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0;">
             <div style="border:2px solid var(--primary,#7C3AED);border-radius:12px;padding:20px;background:var(--gray-50,#f9fafb);">
-              <div style="font-size:32px;margin-bottom:8px;">⊞</div>
+              <div style="font-size:32px;margin-bottom:8px;color:var(--primary,#7C3AED);"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i></div>
               <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:var(--primary,#7C3AED);">Choose a Template</div>
               <div style="font-size:13px;color:var(--gray-600,#4b5563);line-height:1.5;">Start from a fully-built layout. Pick one of 8 pre-designed templates, apply your theme, and customize from there. Best if you want a complete structure quickly.</div>
             </div>
@@ -1212,11 +1221,11 @@ const FLOWS = {
         screenshot: { id: 'f3-template-imported', ext: 'png', caption: 'Tabbed Conference template applied — canvas populated with Tabs, video, Date & Time, Pricing, Location, About, and Footer sections' },
         belowScreenshot: `
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span><strong>Applying a template overwrites your Site Settings — including the theme you just set with the Theme Wizard.</strong> After clicking "Use This Template", go to <strong>Site Settings → Theme → Your Org Themes</strong> and re-select your saved theme. It was saved during the wizard step, so it will always be there.</span>
           </div>
           <div class="pro-tip">
-            <span class="pro-tip__icon">💡</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
             <span>To edit any element, just <strong>click it on the canvas</strong> — the corresponding settings panel auto-focuses in the right sidebar. Click a component to edit that component, a column to adjust column settings, a section to control the section layout, or a tab to manage tab content.</span>
           </div>
         `,
@@ -1246,10 +1255,10 @@ const FLOWS = {
           <div class="step-card__screenshot" data-ss="f3-copy-settings" data-ext="png" data-caption="Component settings menu — Copy content and settings, Copy settings & styles only, Paste component settings" role="button" tabindex="0" aria-label="Click to enlarge: Component copy settings menu" style="margin-top:0;">
             <img src="screenshots/f3-copy-settings.png" alt="Component settings menu showing Copy content and settings, Copy settings and styles only, and Paste component settings options" loading="lazy" style="border-radius:8px;width:100%;">
             <div class="step-card__screenshot-caption">The ⋮ menu in the top-right of any component settings panel</div>
-            <button class="step-card__screenshot-zoom" tabindex="-1" aria-hidden="true">⤢ Enlarge</button>
+            <button class="step-card__screenshot-zoom" tabindex="-1" aria-hidden="true"><i class="fa-solid fa-expand" aria-hidden="true"></i> Enlarge</button>
           </div>
           <div class="pro-tip">
-            <span class="pro-tip__icon">💡</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
             <span>The Copy / Paste Settings workflow is also useful for reusing a styled component across multiple sections — configure it once, then paste the settings into as many copies as you need.</span>
           </div>
         `,
@@ -1263,7 +1272,7 @@ const FLOWS = {
           </ul>
           <h4>Copying settings between components</h4>
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span><strong>Known limitation: components cannot be dragged across sections.</strong> If you need to move a component to a different section, add a new component of the same type in the target section, then use <strong>Copy Settings</strong> (the ⋮ icon in the top-right corner of the component settings panel) on the original, and <strong>Paste Settings</strong> on the new one. This transfers all configuration — content, style, and spacing — without retyping anything.</span>
           </div>
         `
@@ -1273,7 +1282,7 @@ const FLOWS = {
         screenshot: { id: 'f3-scratch-empty-canvas', ext: 'png', caption: 'Empty canvas — "Add New Section" and "Browse Templates" CTAs with Page Structure panel on the right' },
         belowScreenshot: `
           <div class="pro-tip">
-            <span class="pro-tip__icon">💡</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
             <span>You can switch to a template at any time via <strong>Site Settings → Select Template</strong> — it replaces the current canvas. So it's safe to start from scratch, experiment, and then switch to a template if you decide you want a pre-built structure after all.</span>
           </div>
         `,
@@ -1302,7 +1311,7 @@ const FLOWS = {
         content: `
           <p>Add a Header by creating a section at the very top of your canvas, then clicking <strong>Empty — Add component → BASIC → Header</strong>.</p>
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;margin-bottom:16px;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span><strong>Only one Header is allowed per page.</strong> Adding a second Header replaces the existing one. Keep it in its own dedicated section at the very top of your canvas.</span>
           </div>
           <p>The Header settings panel has three tabs:</p>
@@ -1311,7 +1320,7 @@ const FLOWS = {
             <li><strong>Style</strong> — navbar background, glass effect, gradient animation, nav item colors, hamburger icon.</li>
             <li><strong>Spacing</strong> — padding and layout controls.</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Enable <strong>Sticky Header</strong> so navigation follows visitors as they scroll, and link the Register button to <code>#register</code> for a smooth scroll-to-checkout experience.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Enable <strong>Sticky Header</strong> so navigation follows visitors as they scroll, and link the Register button to <code>#register</code> for a smooth scroll-to-checkout experience.</span></div>
         `
       },
       {
@@ -1336,7 +1345,7 @@ const FLOWS = {
               </div>
             </div>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>A common pattern for registration pages: a <strong>2-column section (67/33)</strong> with event details (Title + Date &amp; Time + Info Cards) on the left and the Checkout Form on the right — visitors can read and register without scrolling.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>A common pattern for registration pages: a <strong>2-column section (67/33)</strong> with event details (Title + Date &amp; Time + Info Cards) on the left and the Checkout Form on the right — visitors can read and register without scrolling.</span></div>
         `
       },
       {
@@ -1361,11 +1370,11 @@ const FLOWS = {
             </div>
           </div>
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span>Component-level style overrides take precedence over the theme. If you change your org theme later, components with manual overrides will <strong>not</strong> automatically update — you'll need to clear or re-apply those overrides manually. Use component-level styles sparingly and prefer theme tokens when possible.</span>
           </div>
           <div class="pro-tip">
-            <span class="pro-tip__icon">💡</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
             <span>To reset a component back to pure theme defaults, remove any style overrides you've set in the Style tab. The component will immediately reflect whatever the active theme defines for that token.</span>
           </div>
         `
@@ -1382,7 +1391,7 @@ const FLOWS = {
             <li><strong>Nord</strong> — cool grey-blue, clean and professional</li>
             <li><strong>Coffee</strong> — warm earth tones, great for networking events</li>
           </ul>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Your custom org theme (from the Theme Wizard) is always at the top under <strong>Your Org Themes</strong> and is never overwritten when you try built-in themes — just click it to restore your brand.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Your custom org theme (from the Theme Wizard) is always at the top under <strong>Your Org Themes</strong> and is never overwritten when you try built-in themes — just click it to restore your brand.</span></div>
         `
       },
       {
@@ -1400,7 +1409,7 @@ const FLOWS = {
           <div class="step-card__screenshot" data-ss="f3-your-layouts" data-ext="png" data-caption="Your Layouts modal — showing saved layouts with Default status, In Use indicator, and Create a new Layout button" role="button" tabindex="0" aria-label="Click to enlarge: Your Layouts modal" style="margin-top:0;">
             <img src="screenshots/f3-your-layouts.png" alt="Your Layouts modal showing saved layouts with Default YES badge, In Use status, duplicate and delete actions" loading="lazy" style="border-radius:8px;width:100%;">
             <div class="step-card__screenshot-caption">Your Layouts modal — all saved layouts in your org</div>
-            <button class="step-card__screenshot-zoom" tabindex="-1" aria-hidden="true">⤢ Enlarge</button>
+            <button class="step-card__screenshot-zoom" tabindex="-1" aria-hidden="true"><i class="fa-solid fa-expand" aria-hidden="true"></i> Enlarge</button>
           </div>
         `,
         content: `
@@ -1430,7 +1439,7 @@ const FLOWS = {
             </div>
           </div>
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span>Editing a shared layout changes the page for <strong>every event</strong> using it. If you only want to change one event's page, choose <strong>"Make a copy for this event"</strong> in the Shared Layout dialog before editing.</span>
           </div>
         `
@@ -1460,7 +1469,7 @@ const FLOWS = {
               </div>
             </div>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Build a polished layout for one event, save it as a template, and every future event in your org can start from that same foundation — brand colors, structure, and components all pre-configured. It's the fastest way to keep consistent design across a large event calendar.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Build a polished layout for one event, save it as a template, and every future event in your org can start from that same foundation — brand colors, structure, and components all pre-configured. It's the fastest way to keep consistent design across a large event calendar.</span></div>
         `
       },
       {
@@ -1469,7 +1478,7 @@ const FLOWS = {
         content: `
           <p>Click the <strong>Preview</strong> button in the toolbar to see exactly how your event page will look to visitors. The editor chrome disappears and you get a clean, full-width view of the live design — the same experience an attendee would have when they land on your event website.</p>
           <p>Happy with what you see? You can keep editing at any time — your layout autosaves as you work. When you're ready to go live, publishing is done from the Event Record in Salesforce.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use the <strong>tablet</strong> and <strong>mobile</strong> device buttons in the toolbar to preview how your page reflows at smaller screen sizes before publishing.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use the <strong>tablet</strong> and <strong>mobile</strong> device buttons in the toolbar to preview how your page reflows at smaller screen sizes before publishing.</span></div>
         `
       },
       {
@@ -1478,9 +1487,9 @@ const FLOWS = {
         content: `
           <p>When you're ready to go live, <strong>publishing is done from the Event Record in Salesforce</strong> — not from the Page Designer itself. Once published, attendees can see and interact with your event page: register, browse speakers, view the schedule, and more.</p>
           <p>As an authenticated Salesforce user visiting your own live event page, you'll see a dark banner at the top that reads <strong>"You're viewing this event outside the Page Designer"</strong> with a <strong>Back to Page Designer</strong> button — a handy shortcut to jump straight back into editing without navigating through Salesforce.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>That editor banner is <strong>only visible to you</strong> when you're logged into Salesforce. Your attendees will never see it — they get the clean event page with no editor UI whatsoever.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>That editor banner is <strong>only visible to you</strong> when you're logged into Salesforce. Your attendees will never see it — they get the clean event page with no editor UI whatsoever.</span></div>
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span>Attendees won't see any of your design changes until the event is <strong>published</strong> from the Event Record in Salesforce. The Page Designer preview is only visible to you while you're building.</span>
           </div>
         `
@@ -1516,7 +1525,7 @@ const FLOWS = {
             </div>
           </div>
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span>Granular control over individual checkout components or adding custom flows within the checkout is <strong>not supported in v1 of the Page Designer</strong>. Branding is applied globally via Site Settings tokens — per-component overrides inside the checkout are not yet available.</span>
           </div>
         `
@@ -1539,7 +1548,7 @@ const FLOWS = {
             </div>
           </div>
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span>Granular control over individual Event Group page elements is <strong>not currently supported</strong> in v1 of the Page Designer. Full Event Group customisation is planned for a post-MVP release.</span>
           </div>
           <div class="pro-tip" style="border-color:#ef4444;background:#fef2f2;">
@@ -1797,7 +1806,7 @@ const FLOWS = {
             </div>
           </details>
 
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Gradient text is enabled per-component — set colors here globally, then toggle <strong>Gradient Text</strong> on in the individual Title, Event Title, or Hero component settings.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Gradient text is enabled per-component — set colors here globally, then toggle <strong>Gradient Text</strong> on in the individual Title, Event Title, or Hero component settings.</span></div>
         `
       },
 
@@ -1831,7 +1840,7 @@ const FLOWS = {
             </div>
           </details>
 
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Gradient fill on buttons is enabled per-component — set the colors here globally, then select <strong>"Gradient"</strong> as the button style in the individual Button or Register Button component settings.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Gradient fill on buttons is enabled per-component — set the colors here globally, then select <strong>"Gradient"</strong> as the button style in the individual Button or Register Button component settings.</span></div>
         `
       },
 
@@ -2022,7 +2031,7 @@ const FLOWS = {
             </div>
           </details>
 
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Your own uploaded fonts (Custom Fonts, next step) appear at the top of this picker above the Google Fonts grid — so they're always easy to find.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Your own uploaded fonts (Custom Fonts, next step) appear at the top of this picker above the Google Fonts grid — so they're always easy to find.</span></div>
         `
       },
 
@@ -2060,7 +2069,7 @@ const FLOWS = {
             </div>
           </details>
 
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Custom fonts are <strong>org-wide</strong> — add your brand font once and it's instantly available on every event page in your organization without re-uploading.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Custom fonts are <strong>org-wide</strong> — add your brand font once and it's instantly available on every event page in your organization without re-uploading.</span></div>
         `
       },
 
@@ -2130,7 +2139,7 @@ const FLOWS = {
             </div>
           </details>
 
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Shadow and border work well together at low intensities — try <strong>Very subtle shadow + 1px border</strong> for a clean card look, or <strong>Elevated shadow + no border</strong> for a floating effect. Avoid using both at high values simultaneously.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Shadow and border work well together at low intensities — try <strong>Very subtle shadow + 1px border</strong> for a clean card look, or <strong>Elevated shadow + no border</strong> for a floating effect. Avoid using both at high values simultaneously.</span></div>
         `
       },
 
@@ -2192,7 +2201,7 @@ const FLOWS = {
             </div>
           </details>
 
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>This sets the <strong>default for new sections only</strong>. To change spacing on a section already on the canvas, select that section and go to <strong>Section settings → Spacing tab</strong> — where you'll find the same controls plus per-device overrides for Desktop, Tablet, and Mobile.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>This sets the <strong>default for new sections only</strong>. To change spacing on a section already on the canvas, select that section and go to <strong>Section settings → Spacing tab</strong> — where you'll find the same controls plus per-device overrides for Desktop, Tablet, and Mobile.</span></div>
         `
       },
 
@@ -2246,7 +2255,7 @@ const FLOWS = {
             </div>
           </details>
 
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span><strong>Why this matters:</strong> choosing Full Width on a light-theme page with narrow text columns makes paragraphs stretch uncomfortably wide on 4K monitors. Switching to <strong>Boxed (1280px)</strong> immediately solves readability — lines stay under 80 characters and the page feels intentionally designed rather than stretched.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span><strong>Why this matters:</strong> choosing Full Width on a light-theme page with narrow text columns makes paragraphs stretch uncomfortably wide on 4K monitors. Switching to <strong>Boxed (1280px)</strong> immediately solves readability — lines stay under 80 characters and the page feels intentionally designed rather than stretched.</span></div>
         `
       },
 
@@ -2258,7 +2267,7 @@ const FLOWS = {
           <p class="field-section-intro">The Theme section is the fastest way to apply a complete color palette to your page in one click. It works alongside Color Scheme — think of it as the starting point, and Color Scheme as the fine-tuning layer.</p>
 
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span><strong>Applying a theme resets all component-level color overrides.</strong> If you've gone into individual components and set custom colors (a specific background on a Hero section, a custom border on Info Cards, a unique button color on a Register Button), switching themes will overwrite those granular settings with the new theme's values. Set your theme <em>first</em>, then fine-tune individual components.</span>
           </div>
 
@@ -2301,7 +2310,7 @@ const FLOWS = {
             </div>
           </details>
 
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Trying built-in themes never overwrites your saved org theme. Your custom org theme stays listed under <strong>Your Org Themes</strong> — click it any time to restore your brand palette after exploring.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Trying built-in themes never overwrites your saved org theme. Your custom org theme stays listed under <strong>Your Org Themes</strong> — click it any time to restore your brand palette after exploring.</span></div>
         `
       },
 
@@ -2340,7 +2349,7 @@ const FLOWS = {
             </div>
           </details>
 
-          <div class="pro-tip"><span class="pro-tip__icon">⚠️</span><span>Custom CSS is applied to the <strong>entire page</strong>, including the checkout form. Broad selectors like <code>input { }</code> or <code>* { }</code> can break the registration experience. Test thoroughly in Preview mode before publishing.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span><span>Custom CSS is applied to the <strong>entire page</strong>, including the checkout form. Broad selectors like <code>input { }</code> or <code>* { }</code> can break the registration experience. Test thoroughly in Preview mode before publishing.</span></div>
         `
       },
 
@@ -2362,7 +2371,7 @@ const FLOWS = {
               </div>
             </div>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span><strong>Export before big changes.</strong> Before selecting a new template, running a bulk import, or making sweeping color changes, export your current layout. It only takes a second and gives you a full restore point beyond what History provides.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span><strong>Export before big changes.</strong> Before selecting a new template, running a bulk import, or making sweeping color changes, export your current layout. It only takes a second and gives you a full restore point beyond what History provides.</span></div>
         `
       },
 
@@ -2388,7 +2397,7 @@ const FLOWS = {
               </div>
             </div>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">⚠️</span><span>Import is <strong>destructive and immediate</strong>. The History panel lets you step back if you haven't navigated away — but always export a backup before importing.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span><span>Import is <strong>destructive and immediate</strong>. The History panel lets you step back if you haven't navigated away — but always export a backup before importing.</span></div>
         `
       },
 
@@ -2407,10 +2416,10 @@ const FLOWS = {
             </div>
           </div>
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span><strong>This only clears the Page Designer styles cache.</strong> It does not invalidate caches for Salesforce event data — tickets, sessions, speakers, sponsors, and other record data are managed separately by Salesforce and are not affected by this action. If event record data looks stale on the overview page, that is a Salesforce data sync issue, not a page cache issue.</span>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>The <strong>Page Designer preview</strong> is never cached — it always reflects your latest changes in real time. Only the public event URL served to attendees goes through the cache.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>The <strong>Page Designer preview</strong> is never cached — it always reflects your latest changes in real time. Only the public event URL served to attendees goes through the cache.</span></div>
         `
       },
 
@@ -2448,7 +2457,7 @@ const FLOWS = {
               </div>
             </div>
           </div>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>Use <strong>Cart (Dynamic)</strong> to drop a registration form directly into a marketing landing page — visitors complete the checkout without ever being redirected to a Blackthorn-hosted URL.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>Use <strong>Cart (Dynamic)</strong> to drop a registration form directly into a marketing landing page — visitors complete the checkout without ever being redirected to a Blackthorn-hosted URL.</span></div>
         `
       }
 
@@ -2462,7 +2471,7 @@ const FLOWS = {
         title: 'Checkout Themes (Beta)',
         content: `
           <p>During the Beta release, theming extends to the checkout flow — your brand colors, typography, and button styles automatically carry through when attendees register. However, you won't have granular control over individual elements inside the checkout at this stage. Attendees experience the <strong>Dynamic UI</strong> during checkout, now styled with your Page Designer theme.</p>
-          <div class="pro-tip"><span class="pro-tip__icon">💡</span><span>We are actively working on extending theme control deeper into the checkout experience. Soon, you'll have the flexibility to customize each element independently.</span></div>
+          <div class="pro-tip"><span class="pro-tip__icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span><span>We are actively working on extending theme control deeper into the checkout experience. Soon, you'll have the flexibility to customize each element independently.</span></div>
 
           <h4 style="margin:1.5rem 0 0.5rem;">How It Works</h4>
           <div class="field-group" style="border:none;padding:0;margin:0;">
@@ -2493,7 +2502,7 @@ const FLOWS = {
             <li>Order summary, success/failure pages, and Attendee link pages (check-in, Sessions, confirmation, cancellation)</li>
           </ul>
           <div class="pro-tip" style="border-color:#f59e0b;background:#fffbeb;">
-            <span class="pro-tip__icon">⚠️</span>
+            <span class="pro-tip__icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
             <span>Granular per-element control inside checkout is <strong>not available in v1</strong>. Branding applies globally via theme tokens — you cannot override individual checkout components yet.</span>
           </div>
         `
@@ -2535,41 +2544,40 @@ const FLOWS = {
       {
         title: 'Frequently Asked Questions',
         content: `
-          <table class="icon-table" style="width:100%;">
-            <thead>
-              <tr><th style="width:38%;">Issue</th><th>Suggestion</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>My webpage is blank.</strong></td>
-                <td>This usually means the layout isn't assigned to an event, or no default layout exists yet. Assign a layout to the event or set a default layout from the Your Layouts modal.</td>
-              </tr>
-              <tr>
-                <td><strong>I can't access the Page Designer.</strong></td>
-                <td>Check with your Admin that the authentication process has been completed for your org.</td>
-              </tr>
-              <tr>
-                <td><strong>My changes won't save.</strong></td>
-                <td>Manually save the layout for the first save using the floppy disk icon. Autosave starts automatically after the initial save.</td>
-              </tr>
-              <tr>
-                <td><strong>My webpage looks different on mobile.</strong></td>
-                <td>This is expected. Columns stack to a single column on mobile by default. Use the tablet and mobile preview buttons in the toolbar to check and adjust your layout.</td>
-              </tr>
-              <tr>
-                <td><strong>I switched from Dynamic, Tabbed, or Simple UI and my event page changed.</strong></td>
-                <td>This is expected. The Flex UI is used for Page Designer layouts. Go to the Event record and switch the <strong>UI Experience</strong> field back to your previous setting if needed.</td>
-              </tr>
-              <tr>
-                <td><strong>My theme colors won't apply to a component.</strong></td>
-                <td>Some components have per-component color overrides that take precedence over global theme settings. Check the component's Style tab in the settings sidebar for any color overrides and clear them to restore theme inheritance.</td>
-              </tr>
-              <tr>
-                <td><strong>Can I use the same layout for multiple events?</strong></td>
-                <td>Yes — Page layouts are reusable. Go to each Event record and set <strong>UI Experience</strong> to "Page-Designer," or set the layout as the default layout so all Page Designer–tagged events use it automatically.</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">My webpage is blank.</summary>
+              <div class="faq-answer">This usually means the layout isn't assigned to an event, or no default layout exists yet. Assign a layout to the event or set a default layout from the Your Layouts modal.</div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">I can't access the Page Designer.</summary>
+              <div class="faq-answer">Check with your Admin that the authentication process has been completed for your org.</div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">My changes won't save.</summary>
+              <div class="faq-answer">Manually save the layout for the first save using the floppy disk icon. Autosave starts automatically after the initial save.</div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">My webpage looks different on mobile.</summary>
+              <div class="faq-answer">This is expected. Columns stack to a single column on mobile by default. Use the tablet and mobile preview buttons in the toolbar to check and adjust your layout.</div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">I switched from Dynamic, Tabbed, or Simple UI and my event page changed.</summary>
+              <div class="faq-answer">This is expected. The Flex UI is used for Page Designer layouts. Go to the Event record and switch the <strong>UI Experience</strong> field back to your previous setting if needed.</div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">My theme colors won't apply to a component.</summary>
+              <div class="faq-answer">Some components have per-component color overrides that take precedence over global theme settings. Check the component's Style tab in the settings sidebar for any color overrides and clear them to restore theme inheritance.</div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">Can I use the same layout for multiple events?</summary>
+              <div class="faq-answer">Yes — Page layouts are reusable. Go to each Event record and set <strong>UI Experience</strong> to "Page-Designer," or set the layout as the default layout so all Page Designer–tagged events use it automatically.</div>
+            </details>
+            <details class="faq-item faq-item--warning">
+              <summary class="faq-question">Can I mix Page Designer events with other event types in the same Event Group?</summary>
+              <div class="faq-answer"><strong>Avoid this.</strong> When a group contains both Page Designer and non-Page Designer events, the Page Designer theme can leak into the styling of the non-Page Designer events. This is a known issue in the current release and will be addressed in a future update.</div>
+            </details>
+          </div>
         `
       }
     ]
@@ -2698,8 +2706,93 @@ const state = {
   activeFlow: 1,
   flow2Groups: { basics: true, event: false, checkout: false },
   flow4Groups: { 'color-scheme': true, typography: false, stylings: false },
-  steps: { 1: 0, 2: 0, 3: 0, 4: 0 }
+  steps: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }
 };
+
+const FLOW_LABELS_NAV = {
+  1: 'Feature Tour',
+  2: 'Component Library',
+  3: 'Build Your First Page',
+  4: 'Site Settings',
+  5: 'Tips & FAQs'
+};
+
+const FLOW_SLUGS = {
+  1: 'feature-tour',
+  2: 'component-library',
+  3: 'build-your-first-page',
+  4: 'site-settings',
+  5: 'tips-and-faqs'
+};
+
+const SLUG_TO_FLOW = Object.fromEntries(
+  Object.entries(FLOW_SLUGS).map(([k, v]) => [v, Number(k)])
+);
+
+function slugify(text) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+function stepHash(flowId, stepIndex) {
+  const steps = flowId === 2 ? getFlow2Steps() : FLOWS[flowId]?.steps;
+  const title = steps?.[stepIndex]?.title;
+  return title
+    ? `#${FLOW_SLUGS[flowId]}/${slugify(title)}`
+    : `#${FLOW_SLUGS[flowId]}`;
+}
+
+function getGroupInfo(flowId, stepIndex) {
+  if (flowId === 2) {
+    const ranges = getGroupRanges();
+    const grp = FLOW2_GROUPS.find(g => stepIndex >= ranges[g.id][0] && stepIndex <= ranges[g.id][1]);
+    return grp ? { label: grp.label, firstStep: ranges[grp.id][0] } : null;
+  }
+  if (flowId === 4) {
+    const ranges = getFlow4GroupRanges();
+    const grp = FLOW4_GROUPS.find(g => stepIndex >= ranges[g.id][0] && stepIndex <= ranges[g.id][1]);
+    return grp ? { label: grp.label, firstStep: ranges[grp.id][0] } : null;
+  }
+  return null;
+}
+
+function updateHash(flowId, stepIndex) {
+  history.replaceState(null, '', stepHash(flowId, stepIndex));
+}
+
+function updateBreadcrumb(flowId, stepIndex) {
+  const nav = document.getElementById('breadcrumb');
+  if (!nav) return;
+  const steps = flowId === 2 ? getFlow2Steps() : FLOWS[flowId]?.steps;
+  const step = steps?.[stepIndex];
+  const flowLabel = FLOW_LABELS_NAV[flowId] || '';
+  const groupInfo = getGroupInfo(flowId, stepIndex);
+  const sep = '<span class="breadcrumb__sep" aria-hidden="true">›</span>';
+
+  let html = `<a href="#${FLOW_SLUGS[1]}" class="breadcrumb__home" data-bc="home" aria-label="Home"><i class="fa-solid fa-house" aria-hidden="true"></i></a>${sep}`;
+  html += `<a href="#${FLOW_SLUGS[flowId]}" class="breadcrumb__item" data-bc-flow="${flowId}">${flowLabel}</a>`;
+  if (groupInfo) {
+    html += `${sep}<a href="${stepHash(flowId, groupInfo.firstStep)}" class="breadcrumb__item" data-bc-flow="${flowId}" data-bc-step="${groupInfo.firstStep}">${groupInfo.label}</a>`;
+  }
+  if (step?.title) {
+    html += `${sep}<span class="breadcrumb__item breadcrumb__item--current" aria-current="page">${step.title}</span>`;
+  }
+  nav.innerHTML = html;
+
+  nav.querySelector('[data-bc="home"]')?.addEventListener('click', e => {
+    e.preventDefault();
+    switchFlow(1);
+    goToStep(1, 0);
+  });
+  nav.querySelectorAll('[data-bc-flow]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const fid = Number.parseInt(e.currentTarget.dataset.bcFlow);
+      const sid = e.currentTarget.dataset.bcStep === undefined ? 0 : Number.parseInt(e.currentTarget.dataset.bcStep);
+      switchFlow(fid);
+      goToStep(fid, sid);
+    });
+  });
+}
 
 
 /* ============================================================
@@ -2709,13 +2802,13 @@ function makeStepCard(flowId, step, i) {
   const card = document.createElement('div');
   card.className = 'step-card' + (i === 0 ? ' active' : '');
   card.id = `flow-${flowId}-step-${i}`;
-  const hasScreenshot = step.screenshot && step.screenshot.id;
+  const hasScreenshot = step.screenshot?.id;
   const bodyClass = hasScreenshot ? 'step-card__body' : 'step-card__body step-card__body--full';
   const screenshotHtml = hasScreenshot ? `
       <div class="step-card__screenshot" data-ss="${step.screenshot.id}" data-ext="${step.screenshot.ext || 'jpg'}" data-caption="${step.screenshot.caption}" role="button" tabindex="0" aria-label="Click to enlarge screenshot: ${step.screenshot.caption}">
-        <img src="screenshots/${step.screenshot.id}.${step.screenshot.ext || 'jpg'}?v=${Date.now()}" alt="${step.screenshot.caption}" loading="lazy" onerror="this.parentElement.classList.add('step-card__screenshot--placeholder'); this.style.display='none'; this.parentElement.insertAdjacentHTML('afterbegin','<div style=\\'padding:40px 20px;text-align:center;color:var(--gray-400)\\'>📷<br><small>${step.screenshot.id}</small></div>')">
+        <img src="screenshots/${step.screenshot.id}.${step.screenshot.ext || 'jpg'}?v=${Date.now()}" alt="${step.screenshot.caption}" loading="lazy" data-fallback-id="${step.screenshot.id}">
         <div class="step-card__screenshot-caption">${step.screenshot.caption}</div>
-        <button class="step-card__screenshot-zoom" tabindex="-1" aria-hidden="true">⤢ Enlarge</button>
+        <button class="step-card__screenshot-zoom" tabindex="-1" aria-hidden="true"><i class="fa-solid fa-expand" aria-hidden="true"></i> Enlarge</button>
       </div>` : '';
   const rightCol = step.belowScreenshot
     ? `<div class="step-card__right-col">${screenshotHtml}<div class="step-card__below-screenshot">${step.belowScreenshot}</div></div>`
@@ -2745,6 +2838,85 @@ function renderFlow(flowId) {
   const stepsContainer = document.getElementById(`flow-${flowId}-steps`);
   stepsContainer.innerHTML = '';
   flow.steps.forEach((step, i) => stepsContainer.appendChild(makeStepCard(flowId, step, i)));
+}
+
+function renderStepper4GroupItem(steps, gid, ranges, current, list) {
+  const group = FLOW4_GROUPS.find(g => g.id === gid);
+  const [start, end] = ranges[gid];
+  const isExpanded = state.flow4Groups[gid];
+  const isGroupActive = current >= start && current <= end;
+
+  const headerLi = document.createElement('li');
+  headerLi.className = 'stepper__group-header' + (isGroupActive ? ' active' : '');
+  headerLi.innerHTML = `
+    <button class="stepper__group-btn${isExpanded ? ' expanded' : ''}" data-group4="${gid}" aria-expanded="${isExpanded}">
+      <span class="stepper__group-label"><span class="stepper__group-icon">${group.icon}</span>${group.label}</span>
+      <span class="stepper__group-arrow">▸</span>
+    </button>
+  `;
+  list.appendChild(headerLi);
+
+  const wrapLi = document.createElement('li');
+  wrapLi.className = 'stepper__group-items-li';
+  const wrap = document.createElement('div');
+  wrap.className = 'stepper__group-items';
+  wrap.dataset.group4 = gid;
+  const inner = document.createElement('ul');
+  inner.className = 'stepper__group-items-inner';
+
+  for (let j = start; j <= end; j++) {
+    const s = steps[j];
+    const localNum = j - start + 1;
+    const isDone = j < current;
+    const isActive = j === current;
+    const subLi = document.createElement('li');
+    subLi.className = 'stepper__item stepper__item--sub';
+    const shortTitle = s.title.includes(' — ') ? s.title.split(' — ').slice(1).join(' — ') : s.title;
+    subLi.innerHTML = `
+      <button class="stepper__btn${isActive ? ' active' : ''}${isDone ? ' done' : ''}"
+              data-flow="4" data-step="${j}" data-local-num="${localNum}"
+              aria-current="${isActive ? 'step' : 'false'}">
+        <span class="stepper__num">${isDone ? '✓' : localNum}</span>
+        <span>${shortTitle}</span>
+      </button>
+    `;
+    inner.appendChild(subLi);
+  }
+
+  wrap.appendChild(inner);
+  wrapLi.appendChild(wrap);
+  list.appendChild(wrapLi);
+  if (isExpanded) requestAnimationFrame(() => wrap.classList.add('expanded'));
+}
+
+function renderStepper4(list) {
+  const steps = FLOWS[4].steps;
+  const current = state.steps[4];
+  const ranges = getFlow4GroupRanges();
+  const renderedGroups = new Set();
+
+  steps.forEach((step, i) => {
+    if (step._group) {
+      const gid = step._group;
+      if (renderedGroups.has(gid)) return;
+      renderedGroups.add(gid);
+      renderStepper4GroupItem(steps, gid, ranges, current, list);
+    } else {
+      const isDone = i < current;
+      const isActive = i === current;
+      const li = document.createElement('li');
+      li.className = 'stepper__item';
+      li.innerHTML = `
+        <button class="stepper__btn${isActive ? ' active' : ''}${isDone ? ' done' : ''}"
+                data-flow="4" data-step="${i}"
+                aria-current="${isActive ? 'step' : 'false'}">
+          <span class="stepper__num">${isDone ? '✓' : '·'}</span>
+          <span>${step.title}</span>
+        </button>
+      `;
+      list.appendChild(li);
+    }
+  });
 }
 
 function renderStepper(flowId) {
@@ -2809,83 +2981,7 @@ function renderStepper(flowId) {
   }
 
   if (flowId === 4) {
-    const steps = FLOWS[4].steps;
-    const current = state.steps[4];
-    const ranges = getFlow4GroupRanges();
-    const renderedGroups = new Set();
-
-    steps.forEach((step, i) => {
-      if (step._group) {
-        const gid = step._group;
-        if (renderedGroups.has(gid)) return; // sub-items already added
-        renderedGroups.add(gid);
-
-        const group = FLOW4_GROUPS.find(g => g.id === gid);
-        const [start, end] = ranges[gid];
-        const isExpanded = state.flow4Groups[gid];
-        const isGroupActive = current >= start && current <= end;
-
-        const headerLi = document.createElement('li');
-        headerLi.className = 'stepper__group-header' + (isGroupActive ? ' active' : '');
-        headerLi.innerHTML = `
-          <button class="stepper__group-btn${isExpanded ? ' expanded' : ''}" data-group4="${gid}" aria-expanded="${isExpanded}">
-            <span class="stepper__group-label"><span class="stepper__group-icon">${group.icon}</span>${group.label}</span>
-            <span class="stepper__group-arrow">▸</span>
-          </button>
-        `;
-        list.appendChild(headerLi);
-
-        const wrapLi = document.createElement('li');
-        wrapLi.className = 'stepper__group-items-li';
-        const wrap = document.createElement('div');
-        wrap.className = 'stepper__group-items';
-        wrap.dataset.group4 = gid;
-        const inner = document.createElement('ul');
-        inner.className = 'stepper__group-items-inner';
-
-        for (let j = start; j <= end; j++) {
-          const s = steps[j];
-          const localNum = j - start + 1;
-          const isDone = j < current;
-          const isActive = j === current;
-          const subLi = document.createElement('li');
-          subLi.className = 'stepper__item stepper__item--sub';
-          // Strip the group prefix from the label (e.g. "Color Scheme — Theme Colors" → "Theme Colors")
-          const shortTitle = s.title.includes(' — ') ? s.title.split(' — ').slice(1).join(' — ') : s.title;
-          subLi.innerHTML = `
-            <button class="stepper__btn${isActive ? ' active' : ''}${isDone ? ' done' : ''}"
-                    data-flow="4" data-step="${j}" data-local-num="${localNum}"
-                    aria-current="${isActive ? 'step' : 'false'}">
-              <span class="stepper__num">${isDone ? '✓' : localNum}</span>
-              <span>${shortTitle}</span>
-            </button>
-          `;
-          inner.appendChild(subLi);
-        }
-
-        wrap.appendChild(inner);
-        wrapLi.appendChild(wrap);
-        list.appendChild(wrapLi);
-
-        if (isExpanded) requestAnimationFrame(() => wrap.classList.add('expanded'));
-
-      } else {
-        // Flat item (Theme, Custom CSS, Export, Import, Page Cache, Embed)
-        const isDone = i < current;
-        const isActive = i === current;
-        const li = document.createElement('li');
-        li.className = 'stepper__item';
-        li.innerHTML = `
-          <button class="stepper__btn${isActive ? ' active' : ''}${isDone ? ' done' : ''}"
-                  data-flow="4" data-step="${i}"
-                  aria-current="${isActive ? 'step' : 'false'}">
-            <span class="stepper__num">${isDone ? '✓' : '·'}</span>
-            <span>${step.title}</span>
-          </button>
-        `;
-        list.appendChild(li);
-      }
-    });
+    renderStepper4(list);
     return;
   }
 
@@ -2912,16 +3008,16 @@ function updateProgress(flowId) {
   const steps = flowId === 2 ? getFlow2Steps() : FLOWS[flowId].steps;
   const current = state.steps[flowId];
   const pct = steps.length > 1 ? Math.round((current / (steps.length - 1)) * 100) : 0;
-  document.getElementById(`flow-${flowId}-progress`).style.width = pct + '%';
-  document.getElementById(`flow-${flowId}-prev`).disabled = current === 0;
-  document.getElementById(`flow-${flowId}-next`).textContent =
-    current === steps.length - 1 ? '✓ Done' : 'Next →';
-  document.getElementById(`flow-${flowId}-next`).disabled = current === steps.length - 1;
+  document.getElementById('flow-progress').style.width = pct + '%';
+  document.getElementById('flow-prev').disabled = current === 0;
+  const nextBtn = document.getElementById('flow-next');
+  nextBtn.textContent = current === steps.length - 1 ? '✓ Done' : 'Next →';
+  nextBtn.disabled = current === steps.length - 1;
 }
 
 function updateStepperInPlace(flowId, stepIndex) {
   document.querySelectorAll(`#stepper-list .stepper__btn[data-flow="${flowId}"]`).forEach(btn => {
-    const s = parseInt(btn.dataset.step);
+    const s = Number.parseInt(btn.dataset.step);
     const isDone = s < stepIndex;
     const isActive = s === stepIndex;
     btn.classList.toggle('active', isActive);
@@ -2985,6 +3081,8 @@ function goToStep(flowId, stepIndex) {
   updateStepperInPlace(flowId, stepIndex);
   updateProgress(flowId);
   if (globalThis._syncSidebarFlows) globalThis._syncSidebarFlows(flowId);
+  updateBreadcrumb(flowId, stepIndex);
+  updateHash(flowId, stepIndex);
 }
 
 function toggleGroup(groupId) {
@@ -3025,7 +3123,7 @@ function toggleGroup4(groupId) {
 
 function switchFlow(flowId) {
   document.querySelectorAll('.flow-tab').forEach(btn => {
-    const active = parseInt(btn.dataset.flow) === flowId;
+    const active = Number.parseInt(btn.dataset.flow) === flowId;
     btn.classList.toggle('active', active);
     btn.setAttribute('aria-selected', active);
   });
@@ -3037,6 +3135,8 @@ function switchFlow(flowId) {
   updateProgress(flowId);
   if (globalThis._syncMobileNavActive) globalThis._syncMobileNavActive(flowId);
   if (globalThis._syncSidebarFlows) globalThis._syncSidebarFlows(flowId);
+  updateBreadcrumb(flowId, state.steps[flowId] || 0);
+  updateHash(flowId, state.steps[flowId] || 0);
 }
 
 
@@ -3051,12 +3151,12 @@ function openLightbox(ssId, caption, ext) {
   lightboxImg.src = `screenshots/${ssId}.${ext || 'jpg'}`;
   lightboxImg.alt = caption;
   lightboxCaption.textContent = caption;
-  lightbox.hidden = false;
+  lightbox.showModal();
   document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
-  lightbox.hidden = true;
+  lightbox.close();
   document.body.style.overflow = '';
 }
 
@@ -3090,21 +3190,17 @@ document.addEventListener('click', e => {
   // Stepper step jump
   const stepBtn = e.target.closest('.stepper__btn');
   if (stepBtn) {
-    goToStep(parseInt(stepBtn.dataset.flow), parseInt(stepBtn.dataset.step));
+    goToStep(Number.parseInt(stepBtn.dataset.flow), Number.parseInt(stepBtn.dataset.step));
     return;
   }
 
   // Next / Prev buttons
-  const nextBtn = e.target.closest('[id$="-next"]');
-  if (nextBtn) {
-    const flowId = parseInt(nextBtn.id.replace('flow-', '').replace('-next', ''));
-    goToStep(flowId, state.steps[flowId] + 1);
+  if (e.target.closest('#flow-next')) {
+    goToStep(state.activeFlow, state.steps[state.activeFlow] + 1);
     return;
   }
-  const prevBtn = e.target.closest('[id$="-prev"]');
-  if (prevBtn) {
-    const flowId = parseInt(prevBtn.id.replace('flow-', '').replace('-prev', ''));
-    goToStep(flowId, state.steps[flowId] - 1);
+  if (e.target.closest('#flow-prev')) {
+    goToStep(state.activeFlow, state.steps[state.activeFlow] - 1);
     return;
   }
 
@@ -3112,7 +3208,6 @@ document.addEventListener('click', e => {
   const ssEl = e.target.closest('.step-card__screenshot');
   if (ssEl) {
     openLightbox(ssEl.dataset.ss, ssEl.dataset.caption, ssEl.dataset.ext);
-    return;
   }
 });
 
@@ -3132,13 +3227,31 @@ function stepsForFlow(flowId) {
   return flowId === 2 ? getFlow2Steps() : (FLOWS[flowId]?.steps || []);
 }
 
+function collapseAllMobileNavSections(nav) {
+  nav.querySelectorAll('.mobile-nav-steps').forEach(s => s.classList.remove('open'));
+  nav.querySelectorAll('.mobile-nav-section').forEach(s => {
+    s.classList.remove('active');
+    s.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function buildMobileStepList(flowId, steps, stepsList) {
+  steps.forEach((step, i) => {
+    if (!step.title) return;
+    const stepBtn = document.createElement('button');
+    stepBtn.className = 'mobile-nav-step';
+    stepBtn.textContent = step.title;
+    stepBtn.addEventListener('click', () => { switchFlow(flowId); goToStep(flowId, i); closeMobileNav(); });
+    stepsList.appendChild(stepBtn);
+  });
+}
+
 function initMobileNav() {
   const btn = document.getElementById('hamburger-btn');
   const nav = document.getElementById('mobile-nav');
   const backdrop = document.getElementById('mobile-nav-backdrop');
   if (!btn || !nav || !backdrop) return;
 
-  // Tab order + display numbers matching the header
   const FLOW_ORDER = [1, 2, 4, 3, 5];
   const FLOW_NUMS  = { 1: 1, 2: 2, 4: 3, 3: 4, 5: 5 };
   const FLOW_LABELS = {
@@ -3159,7 +3272,6 @@ function initMobileNav() {
       item.className = 'mobile-nav-item';
       item.dataset.flow = flowId;
 
-      // Section header row (toggle)
       const header = document.createElement('button');
       header.className = 'mobile-nav-section' + (isActive ? ' active' : '');
       header.setAttribute('aria-expanded', isActive);
@@ -3171,32 +3283,13 @@ function initMobileNav() {
         </svg>
       `;
 
-      // Steps sub-list
       const stepsList = document.createElement('div');
       stepsList.className = 'mobile-nav-steps' + (isActive ? ' open' : '');
-
-      steps.forEach((step, i) => {
-        if (!step.title) return;
-        const stepBtn = document.createElement('button');
-        stepBtn.className = 'mobile-nav-step';
-        stepBtn.textContent = step.title;
-        stepBtn.addEventListener('click', () => {
-          switchFlow(flowId);
-          goToStep(flowId, i);
-          closeMobileNav();
-        });
-        stepsList.appendChild(stepBtn);
-      });
+      buildMobileStepList(flowId, steps, stepsList);
 
       header.addEventListener('click', () => {
         const isOpen = stepsList.classList.contains('open');
-        // Collapse all
-        nav.querySelectorAll('.mobile-nav-steps').forEach(s => s.classList.remove('open'));
-        nav.querySelectorAll('.mobile-nav-section').forEach(s => {
-          s.classList.remove('active');
-          s.setAttribute('aria-expanded', 'false');
-        });
-        // Expand this one if it was closed
+        collapseAllMobileNavSections(nav);
         if (!isOpen) {
           stepsList.classList.add('open');
           header.classList.add('active');
@@ -3213,13 +3306,13 @@ function initMobileNav() {
 
   function syncActiveSection(flowId) {
     nav.querySelectorAll('.mobile-nav-section').forEach(s => {
-      const fid = parseInt(s.closest('.mobile-nav-item').dataset.flow);
+      const fid = Number.parseInt(s.closest('.mobile-nav-item').dataset.flow);
       const active = fid === flowId;
       s.classList.toggle('active', active);
       s.setAttribute('aria-expanded', active);
     });
     nav.querySelectorAll('.mobile-nav-steps').forEach(s => {
-      const fid = parseInt(s.closest('.mobile-nav-item').dataset.flow);
+      const fid = Number.parseInt(s.closest('.mobile-nav-item').dataset.flow);
       s.classList.toggle('open', fid === flowId);
     });
   }
@@ -3251,8 +3344,8 @@ function initMobileNav() {
     if (e.key === 'Escape') closeMobileNav();
   });
 
-  window._closeMobileNav = closeMobileNav;
-  window._syncMobileNavActive = syncActiveSection;
+  globalThis._closeMobileNav = closeMobileNav;
+  globalThis._syncMobileNavActive = syncActiveSection;
 }
 
 /* ============================================================
@@ -3263,12 +3356,19 @@ function sidebarStepBadge(i, current) {
   return `<span class="stepper__num">${i + 1}</span>`;
 }
 
+function collapseAllSidebarSections(container) {
+  container.querySelectorAll('.sidebar-flow-steps').forEach(s => s.classList.remove('open'));
+  container.querySelectorAll('.sidebar-flow-section').forEach(s => {
+    s.classList.remove('active');
+    s.setAttribute('aria-expanded', 'false');
+  });
+}
+
 function initSidebarFlows() {
   const container = document.getElementById('sidebar-flows');
   if (!container) return;
 
   const FLOW_ORDER  = [1, 2, 4, 3, 5];
-  const FLOW_NUMS   = { 1: 1, 2: 2, 4: 3, 3: 4, 5: 5 };
   const FLOW_LABELS = {
     1: 'Feature Tour',
     2: 'Component Library',
@@ -3277,6 +3377,61 @@ function initSidebarFlows() {
     5: 'Tips & FAQs'
   };
 
+  const chevronSvg = `<svg class="sidebar-flow-chevron" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+  function makeStepBtn(flowId, step, i, current) {
+    const btn = document.createElement('a');
+    const isDone = i < current;
+    const isCurrent = i === current;
+    btn.className = 'sidebar-flow-step' + (isCurrent ? ' active' : '') + (isDone ? ' done' : '');
+    btn.dataset.step = i;
+    btn.href = stepHash(flowId, i);
+    btn.innerHTML = `${sidebarStepBadge(i, current)}<span>${step.title}</span>`;
+    btn.addEventListener('click', e => { e.preventDefault(); switchFlow(flowId); goToStep(flowId, i); });
+    return btn;
+  }
+
+  function makeGroupHeader(label, isExpanded) {
+    const btn = document.createElement('button');
+    btn.className = 'sidebar-group-header' + (isExpanded ? ' expanded' : '');
+    btn.setAttribute('aria-expanded', String(isExpanded));
+    btn.innerHTML = `<span class="sidebar-group-label">${label}</span>${chevronSvg}`;
+    return btn;
+  }
+
+  function buildGroupedSteps(flowId, steps, groups, getRanges, current) {
+    const ranges = getRanges();
+    const rendered = new Set();
+    const frag = document.createDocumentFragment();
+
+    steps.forEach((step, i) => {
+      const grpId = groups.find(g => i >= ranges[g.id][0] && i <= ranges[g.id][1])?.id || null;
+      if (grpId && !rendered.has(grpId)) {
+        rendered.add(grpId);
+        const [start, end] = ranges[grpId];
+        const grp = groups.find(g => g.id === grpId);
+        const isGroupActive = current >= start && current <= end;
+        const grpHeader = makeGroupHeader(grp.label, isGroupActive);
+        const grpItems = document.createElement('div');
+        grpItems.className = 'sidebar-group-items' + (isGroupActive ? ' open' : '');
+        for (let j = start; j <= end; j++) {
+          if (steps[j]?.title) grpItems.appendChild(makeStepBtn(flowId, steps[j], j, current));
+        }
+        grpHeader.addEventListener('click', () => {
+          const open = grpItems.classList.contains('open');
+          grpItems.classList.toggle('open', !open);
+          grpHeader.classList.toggle('expanded', !open);
+          grpHeader.setAttribute('aria-expanded', String(!open));
+        });
+        frag.appendChild(grpHeader);
+        frag.appendChild(grpItems);
+      } else if (!grpId && step.title) {
+        frag.appendChild(makeStepBtn(flowId, step, i, current));
+      }
+    });
+    return frag;
+  }
+
   function build() {
     container.innerHTML = '';
     FLOW_ORDER.forEach(flowId => {
@@ -3284,49 +3439,37 @@ function initSidebarFlows() {
       const isActive = state.activeFlow === flowId;
       const current = state.steps[flowId];
 
-      const header = document.createElement('button');
+      const header = document.createElement('a');
       header.className = 'sidebar-flow-section' + (isActive ? ' active' : '');
       header.dataset.flow = flowId;
+      header.href = `#${FLOW_SLUGS[flowId]}`;
       header.setAttribute('aria-expanded', String(isActive));
-      header.innerHTML = `
-        <span class="flow-tab__num">${FLOW_NUMS[flowId]}</span>
-        <span class="sidebar-flow-section__label">${FLOW_LABELS[flowId]}</span>
-        <svg class="sidebar-flow-chevron" width="12" height="12" viewBox="0 0 14 14" fill="none">
-          <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      `;
+      header.innerHTML = `<span class="sidebar-flow-section__label">${FLOW_LABELS[flowId]}</span>${chevronSvg}`;
 
       const stepsList = document.createElement('div');
       stepsList.className = 'sidebar-flow-steps' + (isActive ? ' open' : '');
       stepsList.dataset.flow = flowId;
 
-      steps.forEach((step, i) => {
-        if (!step.title) return;
-        const btn = document.createElement('button');
-        const isDone = i < current;
-        const isCurrent = i === current;
-        btn.className = 'sidebar-flow-step' + (isCurrent ? ' active' : '') + (isDone ? ' done' : '');
-        btn.dataset.step = i;
-        btn.innerHTML = `${sidebarStepBadge(i, current)}<span>${step.title}</span>`;
-        btn.addEventListener('click', () => {
-          switchFlow(flowId);
-          goToStep(flowId, i);
+      if (flowId === 2) {
+        stepsList.appendChild(buildGroupedSteps(2, steps, FLOW2_GROUPS, getGroupRanges, current));
+      } else if (flowId === 4) {
+        stepsList.appendChild(buildGroupedSteps(4, FLOWS[4].steps, FLOW4_GROUPS, getFlow4GroupRanges, current));
+      } else {
+        steps.forEach((step, i) => {
+          if (step.title) stepsList.appendChild(makeStepBtn(flowId, step, i, current));
         });
-        stepsList.appendChild(btn);
-      });
+      }
 
-      header.addEventListener('click', () => {
+      header.addEventListener('click', e => {
+        e.preventDefault();
         const isOpen = stepsList.classList.contains('open');
-        container.querySelectorAll('.sidebar-flow-steps').forEach(s => s.classList.remove('open'));
-        container.querySelectorAll('.sidebar-flow-section').forEach(s => {
-          s.classList.remove('active');
-          s.setAttribute('aria-expanded', 'false');
-        });
+        collapseAllSidebarSections(container);
         if (!isOpen) {
           stepsList.classList.add('open');
           header.classList.add('active');
           header.setAttribute('aria-expanded', 'true');
           switchFlow(flowId);
+          goToStep(flowId, state.steps[flowId] || 0);
         }
       });
 
@@ -3337,9 +3480,11 @@ function initSidebarFlows() {
 
   function syncActive(flowId) {
     container.querySelectorAll('.sidebar-flow-section').forEach(btn => {
-      const active = Number.parseInt(btn.dataset.flow) === flowId;
+      const fid = Number.parseInt(btn.dataset.flow);
+      const active = fid === flowId;
       btn.classList.toggle('active', active);
       btn.setAttribute('aria-expanded', String(active));
+      btn.href = `#${FLOW_SLUGS[fid]}`;
     });
     container.querySelectorAll('.sidebar-flow-steps').forEach(list => {
       const fid = Number.parseInt(list.dataset.flow);
@@ -3354,23 +3499,148 @@ function initSidebarFlows() {
         const title = btn.querySelector('span:last-child')?.textContent || '';
         btn.innerHTML = `${sidebarStepBadge(i, current)}<span>${title}</span>`;
       });
+      // Sync group headers open/closed state
+      if (fid === flowId) {
+        let groups = [];
+        if (fid === 2) groups = FLOW2_GROUPS;
+        else if (fid === 4) groups = FLOW4_GROUPS;
+        let ranges = {};
+        if (fid === 2) ranges = getGroupRanges();
+        else if (fid === 4) ranges = getFlow4GroupRanges();
+        list.querySelectorAll('.sidebar-group-items').forEach((grpItems, idx) => {
+          const grp = groups[idx];
+          if (!grp) return;
+          const [start, end] = ranges[grp.id] || [0, 0];
+          const isGrpActive = current >= start && current <= end;
+          grpItems.classList.toggle('open', isGrpActive);
+          const grpHeader = grpItems.previousElementSibling;
+          grpHeader?.classList.toggle('expanded', isGrpActive);
+          grpHeader?.setAttribute('aria-expanded', String(isGrpActive));
+        });
+      }
     });
   }
 
   build();
   globalThis._syncSidebarFlows = syncActive;
+
+  const filterInput = document.getElementById('sidebar-filter');
+  if (filterInput) filterInput.addEventListener('input', onSidebarFilter.bind(null, container));
+}
+
+function stepTitleMatches(btn, q) {
+  const title = btn.querySelector('span:last-child')?.textContent.toLowerCase() || '';
+  return title.includes(q);
+}
+
+function filterGroupItems(grpItems, q) {
+  let groupHasMatch = false;
+  grpItems.querySelectorAll('.sidebar-flow-step').forEach(btn => {
+    const matches = stepTitleMatches(btn, q);
+    btn.style.display = matches ? '' : 'none';
+    if (matches) groupHasMatch = true;
+  });
+  grpItems.style.maxHeight = groupHasMatch ? '800px' : '0';
+  const grpHeader = grpItems.previousElementSibling;
+  if (grpHeader?.classList.contains('sidebar-group-header')) {
+    grpHeader.style.display = groupHasMatch ? '' : 'none';
+  }
+  return groupHasMatch;
+}
+
+function onSidebarFilter(container) {
+  const q = document.getElementById('sidebar-filter')?.value.trim().toLowerCase() || '';
+  container.querySelectorAll('.sidebar-flow-steps').forEach(list => {
+    const fid = Number.parseInt(list.dataset.flow);
+    const sectionHeader = container.querySelector(`.sidebar-flow-section[data-flow="${fid}"]`);
+
+    if (!q) {
+      list.querySelectorAll('.sidebar-flow-step').forEach(btn => { btn.style.display = ''; });
+      list.querySelectorAll('.sidebar-group-items').forEach(grp => { grp.style.maxHeight = ''; });
+      list.querySelectorAll('.sidebar-group-header').forEach(h => { h.style.display = ''; });
+      const isActive = fid === state.activeFlow;
+      list.classList.toggle('open', isActive);
+      sectionHeader?.classList.toggle('active', isActive);
+      sectionHeader?.setAttribute('aria-expanded', String(isActive));
+      sectionHeader && (sectionHeader.style.display = '');
+      return;
+    }
+
+    let sectionHasMatch = false;
+
+    list.querySelectorAll(':scope > .sidebar-flow-step').forEach(btn => {
+      const matches = stepTitleMatches(btn, q);
+      btn.style.display = matches ? '' : 'none';
+      if (matches) sectionHasMatch = true;
+    });
+
+    list.querySelectorAll('.sidebar-group-items').forEach(grpItems => {
+      if (filterGroupItems(grpItems, q)) sectionHasMatch = true;
+    });
+
+    list.classList.toggle('open', sectionHasMatch);
+    sectionHeader?.classList.toggle('active', sectionHasMatch);
+    sectionHeader?.setAttribute('aria-expanded', String(sectionHasMatch));
+    sectionHeader && (sectionHeader.style.display = sectionHasMatch ? '' : 'none');
+  });
+}
+
+function parseAndNavigateHash() {
+  const raw = location.hash.slice(1);
+  if (!raw) return false;
+
+  // Slug format: #feature-tour  or  #feature-tour/the-toolbar
+  const slashIdx = raw.indexOf('/');
+  const flowSlug = slashIdx === -1 ? raw : raw.slice(0, slashIdx);
+  const stepSlug = slashIdx === -1 ? null : raw.slice(slashIdx + 1);
+  const flowId = SLUG_TO_FLOW[flowSlug];
+
+  if (flowId) {
+    if (!stepSlug) {
+      switchFlow(flowId);
+      goToStep(flowId, state.steps[flowId] || 0);
+      return true;
+    }
+    const steps = flowId === 2 ? getFlow2Steps() : FLOWS[flowId]?.steps;
+    const idx = steps?.findIndex(s => s.title && slugify(s.title) === stepSlug) ?? -1;
+    switchFlow(flowId);
+    goToStep(flowId, Math.max(0, idx));
+    return true;
+  }
+
+  // Legacy numeric format: #flow-1-step-0
+  const m = /^flow-(\d+)-step-(\d+)$/.exec(raw);
+  if (m) {
+    const fid = Number.parseInt(m[1]);
+    const sid = Number.parseInt(m[2]);
+    if (FLOWS[fid]) { switchFlow(fid); goToStep(fid, sid); return true; }
+  }
+
+  return false;
+}
+
+function handleScreenshotError(e) {
+  const img = e.target;
+  if (!img.matches('.step-card__screenshot img')) return;
+  const parent = img.parentElement;
+  const id = img.dataset.fallbackId || '';
+  parent.classList.add('step-card__screenshot--placeholder');
+  img.style.display = 'none';
+  parent.insertAdjacentHTML('beforeend', `<div style="padding:40px 20px;text-align:center;color:var(--gray-400)">📷<br><small>${id}</small></div>`);
 }
 
 function init() {
+  document.addEventListener('error', handleScreenshotError, true);
   renderFlow(1);
   renderFlow(2);
   renderFlow(3);
   renderFlow(4);
   renderFlow(5);
-  switchFlow(1);
+  if (!parseAndNavigateHash()) switchFlow(1);
   initSearch();
   initMobileNav();
   initSidebarFlows();
+  globalThis.addEventListener('popstate', parseAndNavigateHash);
 }
 
 /* ============================================================
@@ -3401,7 +3671,8 @@ function buildSearchIndex() {
 function highlightSearchMatches(container, query) {
   const q = query.trim();
   if (!q) return;
-  const re = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
+  const re = new RegExp('(' + escaped + ')', 'gi');
   const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
     acceptNode: node => {
       const tag = node.parentElement?.tagName;
@@ -3450,7 +3721,8 @@ function initSearch() {
   function renderResults(query) {
     const q = query.trim().toLowerCase();
     if (!q) { results.hidden = true; return; }
-    const wordRe = new RegExp(`\\b${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i');
+    const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`);
+    const wordRe = new RegExp(String.raw`\b` + escaped, 'i');
     const scored = index.map(e => {
       const titleLower = e.title.toLowerCase();
       if (titleLower === q) return { ...e, score: 4 };
@@ -3488,8 +3760,8 @@ function initSearch() {
   results.addEventListener('click', e => {
     const item = e.target.closest('.search-result-item');
     if (!item) return;
-    const flowId = parseInt(item.dataset.flow);
-    const stepIndex = parseInt(item.dataset.step);
+    const flowId = Number.parseInt(item.dataset.flow);
+    const stepIndex = Number.parseInt(item.dataset.step);
     const query = input.value.trim();
     switchFlow(flowId);
     goToStep(flowId, stepIndex);
