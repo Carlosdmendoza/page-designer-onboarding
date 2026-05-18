@@ -690,7 +690,7 @@ const FLOWS = {
       {
         title: 'Header — Visibility',
         category: 'Page Designer',
-        screenshot: { id: 'f3-header-visibility', caption: 'Header component — Visibility settings tab' },
+        screenshot: { id: 'header-visibility', ext: 'png', caption: 'Header component — Visibility settings tab' },
         content: `
           <p class="comp-category-badge comp-category-badge--basic">Page Designer</p>
           <p class="field-section-intro">The Header component adds a navigation bar to the top of your page. Only one Header is allowed per page — keep it in its own section at the very top of the canvas.</p>
