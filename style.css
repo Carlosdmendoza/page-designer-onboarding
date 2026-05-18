@@ -64,9 +64,9 @@ body { font-family: var(--font); color: var(--gray-900); background: var(--gray-
   text-decoration: none;
 }
 
-/* FLOW TABS (header nav) */
+/* FLOW TABS (header nav) — hidden on desktop, shown only on tablet */
 .flow-tabs {
-  display: flex;
+  display: none;
   gap: 4px;
   background: var(--gray-100);
   border-radius: 10px;
@@ -208,13 +208,13 @@ body { font-family: var(--font); color: var(--gray-900); background: var(--gray-
   margin-bottom: 32px;
 }
 .flow-intro h1 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--gray-900);
   margin-bottom: 8px;
 }
 .flow-intro p {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--gray-600);
   max-width: 680px;
 }
@@ -253,7 +253,7 @@ body { font-family: var(--font); color: var(--gray-900); background: var(--gray-
   flex-shrink: 0;
 }
 .step-card__title {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--gray-900);
 }
@@ -267,7 +267,7 @@ body { font-family: var(--font); color: var(--gray-900); background: var(--gray-
 .step-card__body--full {
   grid-template-columns: 1fr;
 }
-.step-card__text { font-size: 14.5px; line-height: 1.7; color: var(--gray-600); }
+.step-card__text { font-size: 16px; line-height: 1.7; color: var(--gray-600); }
 .step-card__text p { margin-bottom: 12px; }
 .step-card__text p:last-child { margin-bottom: 0; }
 .step-card__text ul, .step-card__text ol {
@@ -316,17 +316,19 @@ body { font-family: var(--font); color: var(--gray-900); background: var(--gray-
   position: absolute;
   bottom: 8px;
   right: 8px;
-  background: rgba(0,0,0,.45);
+  background: rgba(0,0,0,.55);
   color: white;
   border: none;
   border-radius: var(--radius-sm);
-  padding: 4px 8px;
-  font-size: 11px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity .2s;
+  opacity: 1;
+  transition: background .2s, transform .15s;
+  box-shadow: 0 2px 6px rgba(0,0,0,.3);
 }
-.step-card__screenshot:hover .step-card__screenshot-zoom { opacity: 1; }
+.step-card__screenshot-zoom:hover { background: rgba(124,58,237,.85); transform: scale(1.05); }
 .step-card__screenshot-caption {
   padding: 8px 12px;
   font-size: 11.5px;
@@ -472,7 +474,7 @@ body { font-family: var(--font); color: var(--gray-900); background: var(--gray-
   position: absolute;
   top: 16px;
   right: 20px;
-  background: rgba(255,255,255,.15);
+  background: rgba(0,0,0,.5);
   border: none;
   color: white;
   font-size: 18px;
@@ -923,13 +925,120 @@ mark.search-highlight {
 .mobile-nav-backdrop.open { display: block; }
 
 /* ============================================================
+   SIDEBAR FLOW TOGGLES (desktop only)
+   ============================================================ */
+.sidebar-flows {
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-flow-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 8px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: var(--gray-500);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  transition: background .12s, color .12s;
+  margin-top: 4px;
+}
+.sidebar-flow-section:hover { color: var(--gray-900); }
+.sidebar-flow-section.active { color: var(--purple-dk); }
+.sidebar-flow-section .flow-tab__num {
+  background: var(--gray-200);
+  color: var(--gray-500);
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  transition: background .12s, color .12s;
+}
+.sidebar-flow-section.active .flow-tab__num {
+  background: var(--purple);
+  color: var(--white);
+}
+.sidebar-flow-section__label { flex: 1; }
+.sidebar-flow-chevron {
+  flex-shrink: 0;
+  color: var(--gray-400);
+  transition: transform .2s ease;
+}
+.sidebar-flow-section.active .sidebar-flow-chevron {
+  transform: rotate(180deg);
+  color: var(--purple);
+}
+
+/* Steps sub-list under each flow section */
+.sidebar-flow-steps {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s ease;
+  padding-left: 8px;
+}
+.sidebar-flow-steps.open { max-height: 800px; }
+.sidebar-flow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  padding: 6px 8px;
+  border: none;
+  background: transparent;
+  color: var(--gray-600);
+  font-size: 12.5px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: left;
+  border-radius: var(--radius-sm);
+  transition: background .1s, color .1s;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.sidebar-flow-step .stepper__num {
+  background: var(--gray-200);
+  color: var(--gray-600);
+  flex-shrink: 0;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+}
+.sidebar-flow-step:hover { background: var(--gray-100); color: var(--gray-900); }
+.sidebar-flow-step.active {
+  color: var(--purple-dk);
+  font-weight: 600;
+  background: var(--purple-lt);
+}
+.sidebar-flow-step.active .stepper__num {
+  background: var(--purple);
+  color: var(--white);
+}
+.sidebar-flow-step.done { color: var(--gray-900); }
+.sidebar-flow-step.done .stepper__num {
+  background: var(--green);
+  color: var(--white);
+}
+
+/* ============================================================
    RESPONSIVE — TABLET
    ============================================================ */
 @media (max-width: 960px) {
   .stepper { display: none; }
   .content { padding: 24px 20px; }
   .step-card__body { grid-template-columns: 1fr; }
-  .flow-tabs { overflow-x: auto; }
+  .flow-tabs { display: flex; overflow-x: auto; }
   .flow-tab { font-size: 12.5px; padding: 6px 12px; }
 }
 

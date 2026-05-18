@@ -21,7 +21,7 @@
         </svg>
         <span>Page Designer Guide</span>
       </div>
-      <nav class="flow-tabs" role="tablist" aria-label="Tutorial flows">
+      <div class="flow-tabs" role="tablist" aria-label="Tutorial flows">
         <button class="flow-tab active" role="tab" data-flow="1" aria-selected="true" aria-controls="flow-1-panel">
           <span class="flow-tab__num">1</span> Feature Tour
         </button>
@@ -37,7 +37,7 @@
         <button class="flow-tab" role="tab" data-flow="5" aria-selected="false" aria-controls="flow-5-panel">
           <span class="flow-tab__num">5</span> Tips &amp; FAQs
         </button>
-      </nav>
+      </div>
       <div class="search-wrap" role="search">
         <input class="search-input" id="search-input" type="search" placeholder="Search guide…" aria-label="Search guide" autocomplete="off" />
         <div class="search-results" id="search-results" hidden></div>
@@ -59,7 +59,7 @@
 
     <!-- SIDEBAR STEPPER -->
     <aside class="stepper" aria-label="Steps">
-      <ol class="stepper__list" id="stepper-list"></ol>
+      <nav class="sidebar-flows" id="sidebar-flows" aria-label="Tutorial flows"></nav>
     </aside>
 
     <!-- CONTENT PANELS -->

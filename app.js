@@ -2749,7 +2749,7 @@ function renderFlow(flowId) {
 
 function renderStepper(flowId) {
   const list = document.getElementById('stepper-list');
-  list.innerHTML = '';
+  if (!list) return;
 
   if (flowId === 2) {
     const allSteps = getFlow2Steps();
@@ -2984,6 +2984,7 @@ function goToStep(flowId, stepIndex) {
   // Update stepper states in-place (no DOM rebuild = no re-animation)
   updateStepperInPlace(flowId, stepIndex);
   updateProgress(flowId);
+  if (globalThis._syncSidebarFlows) globalThis._syncSidebarFlows(flowId);
 }
 
 function toggleGroup(groupId) {
@@ -3034,7 +3035,8 @@ function switchFlow(flowId) {
   state.activeFlow = flowId;
   renderStepper(flowId);
   updateProgress(flowId);
-  if (window._syncMobileNavActive) window._syncMobileNavActive(flowId);
+  if (globalThis._syncMobileNavActive) globalThis._syncMobileNavActive(flowId);
+  if (globalThis._syncSidebarFlows) globalThis._syncSidebarFlows(flowId);
 }
 
 
@@ -3060,7 +3062,7 @@ function closeLightbox() {
 
 document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.open) closeLightbox(); });
 
 
 /* ============================================================
@@ -3078,10 +3080,10 @@ document.addEventListener('click', e => {
     return;
   }
 
-  // Flow tab switch
+  // Flow tab switch (header tabs on tablet)
   const flowTab = e.target.closest('.flow-tab');
   if (flowTab) {
-    switchFlow(parseInt(flowTab.dataset.flow));
+    switchFlow(Number.parseInt(flowTab.dataset.flow));
     return;
   }
 
@@ -3126,6 +3128,10 @@ document.addEventListener('keydown', e => {
 /* ============================================================
    INIT
    ============================================================ */
+function stepsForFlow(flowId) {
+  return flowId === 2 ? getFlow2Steps() : (FLOWS[flowId]?.steps || []);
+}
+
 function initMobileNav() {
   const btn = document.getElementById('hamburger-btn');
   const nav = document.getElementById('mobile-nav');
@@ -3142,10 +3148,6 @@ function initMobileNav() {
     4: 'Site Settings',
     5: 'Tips & FAQs'
   };
-
-  function stepsForFlow(flowId) {
-    return flowId === 2 ? getFlow2Steps() : (FLOWS[flowId]?.steps || []);
-  }
 
   function buildNav() {
     nav.innerHTML = '';
@@ -3253,6 +3255,112 @@ function initMobileNav() {
   window._syncMobileNavActive = syncActiveSection;
 }
 
+/* ============================================================
+   SIDEBAR FLOW TOGGLES
+   ============================================================ */
+function sidebarStepBadge(i, current) {
+  if (i < current) return '<span class="stepper__num done-badge">✓</span>';
+  return `<span class="stepper__num">${i + 1}</span>`;
+}
+
+function initSidebarFlows() {
+  const container = document.getElementById('sidebar-flows');
+  if (!container) return;
+
+  const FLOW_ORDER  = [1, 2, 4, 3, 5];
+  const FLOW_NUMS   = { 1: 1, 2: 2, 4: 3, 3: 4, 5: 5 };
+  const FLOW_LABELS = {
+    1: 'Feature Tour',
+    2: 'Component Library',
+    3: 'Build Your First Page',
+    4: 'Site Settings',
+    5: 'Tips & FAQs'
+  };
+
+  function build() {
+    container.innerHTML = '';
+    FLOW_ORDER.forEach(flowId => {
+      const steps = stepsForFlow(flowId);
+      const isActive = state.activeFlow === flowId;
+      const current = state.steps[flowId];
+
+      const header = document.createElement('button');
+      header.className = 'sidebar-flow-section' + (isActive ? ' active' : '');
+      header.dataset.flow = flowId;
+      header.setAttribute('aria-expanded', String(isActive));
+      header.innerHTML = `
+        <span class="flow-tab__num">${FLOW_NUMS[flowId]}</span>
+        <span class="sidebar-flow-section__label">${FLOW_LABELS[flowId]}</span>
+        <svg class="sidebar-flow-chevron" width="12" height="12" viewBox="0 0 14 14" fill="none">
+          <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      `;
+
+      const stepsList = document.createElement('div');
+      stepsList.className = 'sidebar-flow-steps' + (isActive ? ' open' : '');
+      stepsList.dataset.flow = flowId;
+
+      steps.forEach((step, i) => {
+        if (!step.title) return;
+        const btn = document.createElement('button');
+        const isDone = i < current;
+        const isCurrent = i === current;
+        btn.className = 'sidebar-flow-step' + (isCurrent ? ' active' : '') + (isDone ? ' done' : '');
+        btn.dataset.step = i;
+        btn.innerHTML = `${sidebarStepBadge(i, current)}<span>${step.title}</span>`;
+        btn.addEventListener('click', () => {
+          switchFlow(flowId);
+          goToStep(flowId, i);
+        });
+        stepsList.appendChild(btn);
+      });
+
+      header.addEventListener('click', () => {
+        const isOpen = stepsList.classList.contains('open');
+        container.querySelectorAll('.sidebar-flow-steps').forEach(s => s.classList.remove('open'));
+        container.querySelectorAll('.sidebar-flow-section').forEach(s => {
+          s.classList.remove('active');
+          s.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          stepsList.classList.add('open');
+          header.classList.add('active');
+          header.setAttribute('aria-expanded', 'true');
+          switchFlow(flowId);
+        }
+      });
+
+      container.appendChild(header);
+      container.appendChild(stepsList);
+    });
+  }
+
+  function syncActive(flowId) {
+    container.querySelectorAll('.sidebar-flow-section').forEach(btn => {
+      const active = Number.parseInt(btn.dataset.flow) === flowId;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-expanded', String(active));
+    });
+    container.querySelectorAll('.sidebar-flow-steps').forEach(list => {
+      const fid = Number.parseInt(list.dataset.flow);
+      list.classList.toggle('open', fid === flowId);
+      const current = state.steps[fid];
+      list.querySelectorAll('.sidebar-flow-step').forEach(btn => {
+        const i = Number.parseInt(btn.dataset.step);
+        const isDone = i < current;
+        const isCurrent = fid === flowId && i === current;
+        btn.classList.toggle('active', isCurrent);
+        btn.classList.toggle('done', isDone);
+        const title = btn.querySelector('span:last-child')?.textContent || '';
+        btn.innerHTML = `${sidebarStepBadge(i, current)}<span>${title}</span>`;
+      });
+    });
+  }
+
+  build();
+  globalThis._syncSidebarFlows = syncActive;
+}
+
 function init() {
   renderFlow(1);
   renderFlow(2);
@@ -3262,6 +3370,7 @@ function init() {
   switchFlow(1);
   initSearch();
   initMobileNav();
+  initSidebarFlows();
 }
 
 /* ============================================================
