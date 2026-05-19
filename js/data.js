@@ -2516,6 +2516,8 @@ const FLOWS = {
             <li><strong>Preview on all three device sizes</strong> (desktop, tablet, mobile) before publishing. Columns stack on mobile by default — check that the stacking order makes sense for your content.</li>
             <li><strong>Run the accessibility checker</strong> before publishing. It flags contrast failures, missing alt text, and heading order issues in seconds.</li>
             <li><strong>Complete your Event record before designing.</strong> Page Designer pulls live data from Salesforce — populate your banner, description, sessions, speakers, and tickets first so you can see real content while you build.</li>
+            <li><strong>After switching themes, update adjacent colors manually.</strong> Changing your Primary, Secondary, Accent, or Base color after the initial theme setup doesn't automatically update derived settings like gradients and button colors. Go into each Site Setting directly (e.g., <strong>Site Settings → Gradients</strong>) to sync them. A future "Apply to Site" option will automate this.</li>
+            <li><strong>Target columns precisely with the Page Structure sidebar.</strong> When you have a multi-column layout (e.g., 33/66 split) and want to add padding to just one column, select it from the Structure tree rather than clicking in the canvas — clicking the canvas can accidentally select the parent section and apply spacing to everything.</li>
           </ul>
         `
       },
@@ -2576,6 +2578,14 @@ const FLOWS = {
             <details class="faq-item faq-item--warning">
               <summary class="faq-question">Can I mix Page Designer events with other event types in the same Event Group?</summary>
               <div class="faq-answer"><strong>Avoid this.</strong> When a group contains both Page Designer and non-Page Designer events, the Page Designer theme can leak into the styling of the non-Page Designer events. This is a known issue in the current release and will be addressed in a future update.</div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">I updated my Primary Color but my buttons and gradients didn't change.</summary>
+              <div class="faq-answer">This is expected behavior. When a theme is first applied, all adjacent site settings (button colors, gradients, text colors, etc.) are pre-filled based on your Primary, Secondary, Accent, and Base colors. After that initial setup, changing <strong>Primary Color</strong> alone does not cascade to those derived settings — you need to update them individually in Site Settings (e.g., go to <strong>Site Settings → Gradients</strong> to update gradient colors). A future update will add an <strong>"Apply to Site"</strong> button that lets you push a color change across all adjacent settings in one click.</div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">How do I add padding to a specific column without affecting the whole section?</summary>
+              <div class="faq-answer">Use the <strong>Page Structure sidebar</strong> (tree icon in the toolbar) to select the exact column you want to target, then use the Spacing controls in the settings panel — this keeps changes isolated to that column. You can also click directly on an individual component inside a column and adjust its spacing from the component's own settings panel, which affects only that component and not neighboring columns or the entire section.</div>
             </details>
           </div>
         `
